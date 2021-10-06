@@ -1,6 +1,14 @@
 {
-  "name": "pablo_rigalli_web_ui_dev_xepelin",
-  "version": "0.1.0",
+  "name": "web_ui_dev_xepelin",
+  "version": "1.0.0",
+  "description": "Desafio tecnico - Landing Page - Xepelin",
+  "main": "index.js",
+  "repository": "",
+  "author": {
+    "name": "Pablo Rigalli",
+    "email": "rigallipablo@gmail.com"
+  },
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
