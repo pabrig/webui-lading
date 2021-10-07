@@ -11,6 +11,8 @@
 - [React devtools](https://chrome.google.com/webstore/detail/react-developer-tools/) extension for debbuging.
 - [React Hooks](https://reactjs.org/docs/hooks-reference.html) React hooks API.
 - [Next Js](https://nextjs.org/) Next Js.
+- [Postcss](https://postcss.org/) Postcss.
+- [Typescript](https://www.typescriptlang.org/) Typescript.
 
 
 ## Installation

@@ -1,0 +1,9 @@
+
+{
+    "custom-media": {
+      "--mobile": "(min-width: 23.4em)",
+      "--desktop": "(min-width: 90em)"
+
+    }
+  }
+  
