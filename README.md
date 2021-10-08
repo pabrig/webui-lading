@@ -13,6 +13,7 @@
 - [Next Js](https://nextjs.org/) Next Js.
 - [Postcss](https://postcss.org/) Postcss.
 - [Typescript](https://www.typescriptlang.org/) Typescript.
+- [Framer-Motion](https://www.framer.com/docs/) Framer-Motion.
 
 
 ## Installation

@@ -2,11 +2,14 @@
 :root {
   /* Colors vars */
   --purple: #7847F2;
+  --dark-purple:#141531;
   --black:#141531;
   --white:#FFFFFF;
   --green:#99D5AA;
-  --orange:#EA8432
+  --orange:#EA8432;
 }
+
+
 
 /* Remove default padding */
 ul[class],
@@ -28,6 +31,10 @@ dl,
 dd {
   margin: 0;
 }
+/* Remove default list-style */
+ul{
+  list-style: none;
+}
 
 /* Set core body defaults */
 body {
@@ -46,11 +53,6 @@ body {
   }
 }
 
-/* Remove list styles on ul*/
-ul[class],
-ol[class] {
-  list-style: none;
-}
 
 /* A elements that don't have a class get default styles */
 

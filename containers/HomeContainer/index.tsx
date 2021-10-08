@@ -1,13 +1,29 @@
 import React, { FC } from 'react';
 import styles from '../../styles/Home.module.css';
-import Hero from '../../components/Hero';
+import { Hero, About, Testimony, Footer } from '../../components';
+
 import { Data } from '../../lib/constants';
 const HomeContainer: FC = () => {
-  const data = Data;
+  //Const Data
+  const hero = Data.hero;
+  const about = Data.about;
+  const testimony = Data.testimony;
+  const footer = Data.footer;
+
   return (
     <div className={styles.home}>
       {' '}
-      <Hero title={data.hero.title} />
+      <Hero title={hero.title} icon={hero.icon} />
+      <About title={about.title} icon={about.icon} />
+      <Testimony title={testimony.title} icon={testimony.icon} />
+      <Footer
+        icon={footer.icon}
+        description={footer.description}
+        solutions={footer.solutions}
+        explorer={footer.explorer}
+        followme={footer.followme}
+        description_footer={footer.description_footer}
+      />
     </div>
   );
 };
