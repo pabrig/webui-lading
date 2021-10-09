@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
 import styles from './Reality.module.css';
+import Image from 'next/image';
 import { RealityTypes } from '../../types/Model';
 import FloatingFlash from './FloatingFlash';
+import Card from './Card';
 import { Data } from '../../lib/constants';
 
 const Reality: FC<RealityTypes> = ({ title, description }) => {
@@ -12,6 +14,9 @@ const Reality: FC<RealityTypes> = ({ title, description }) => {
         <div className={styles.reality__header}>
           <h2 dangerouslySetInnerHTML={{ __html: title }} />
           <p dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
+        <div className={styles.reality__card}>
+          <Card />
         </div>
         <div className={styles.reality__footer}>
           <FloatingFlash

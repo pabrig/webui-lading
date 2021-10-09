@@ -22,7 +22,8 @@
       }
     
       p {
-        margin: 29px;
+        margin-left: 29px;
+        margin-right: 29px;
         font-size: 13px;
         font-weight: 400;
         line-height: 28px;
@@ -32,18 +33,96 @@
           line-height: 28px;
         }
       }
+      &__card{
+        @media(--desktop){
+          width: 284px;
+          height: 485px;
+          border-radius:  15px      ;
+          -webkit-border-radius:  15px      ;
+          -moz-border-radius:  15px      ;
+          -ms-border-radius:  15px      ;
+          -o-border-radius:  15px      ;
+}
+h3{
+
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 27px;
+text-align: center;
+letter-spacing: -0.02em;
+margin-top:32px;
+text-shadow: 1px 5px 4px rgba(15,6,4,0.33);
+&:hover{
+  text-shadow: none;
+}
+}
+p{
+  font-style: normal;
+font-weight: normal;
+font-size: 11px;
+line-height: 26px;
+/* or 200% */
+text-align: center;
+text-shadow: 1px 5px 4px rgba(15,6,4,0.33);
+&:hover{
+  text-shadow: none;
+}
+}
+
+        ul{
+          display: contents;
+        }
+        li {
+          &:hover {
+            background-color: var(--orange);
+          }
+        }
+        &_item{
+         width: 252px;
+         height:364px;
+         display: grid;
+         justify-items: center;
+         grid-template-columns: 1fr;
+         margin-right: auto;
+         margin-left: auto;
+         border-radius: 15px;
+         -webkit-border-radius: 15px;
+         -moz-border-radius: 15px;
+         -ms-border-radius: 15px;
+         -o-border-radius: 15px;
+}
+        &_image{
+        width:128px;
+        height:128px;
+          @meida(--desktop){
+            margin-top:38px;
+            width:154px;
+            height:154px;
+          }
+       
+        }
+        &_redirect{
+          font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+color: var(--purple);
+        }
+     
+      }
       &__footer{
-          margin-top:40px;
+          margin-top:10px;
           margin-bottom: 40px;
           &_green{
        width:120px;
        height:29px;
        margin-left: auto;
        margin-bottom: 10px;
+  
        @media(--desktop){
           width:476px;
           height:34px; 
-
           box-shadow: 11px 10px 5px -5px rgba(0,0,0,0.64);
           -webkit-box-shadow: 11px 10px 5px -5px rgba(0,0,0,0.64);
           -moz-box-shadow: 11px 10px 5px -5px rgba(0,0,0,0.64);
