@@ -17,6 +17,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@artsy/fresnel": "^3.0.2",
+    "framer-motion": "^4.1.17",
     "next": "11.1.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-nested": "^5.0.6",

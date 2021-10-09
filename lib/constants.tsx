@@ -1,12 +1,27 @@
+import { createMedia } from '@artsy/fresnel';
+// breakpoints values can be either strings or integers
+export const { MediaContextProvider, Media } = createMedia({
+  breakpoints: {
+    sm: 0,
+    md: 768,
+    lg: 1440
+  }
+});
+
 /*Info */
 export const Data = {
   hero: {
     title: 'Hero',
     icon: '/public/images/hero/icon_xepelin.svg'
   },
-  about: {
-    title: 'About',
-    icon: '/public/images/hero/icon_xepelin.svg'
+  reality: {
+    title: '¿Cómo lo hacemos realidad?',
+    description:
+      'Nuestro modelo de riesgos evalúa en segundos<br/> una operación, lo que nos permite financiar en el mismo día.',
+    green_flash_mob: '/images/reality/green_flash_mobile.png',
+    green_flash_desk: '/images/reality/green_flash_desktop.png',
+    orange_flash_mob: '/images/reality/orange_flash_mobile.png',
+    orange_flash_desk: '/images/reality/orange_flash_desktop.png'
   },
 
   testimony: {

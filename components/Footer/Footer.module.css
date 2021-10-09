@@ -8,6 +8,22 @@
     height: auto !important;
   }
 
+  &__container {
+    margin: 29px;
+    color: var(--white);
+    @media (--desktop) {
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  h2 {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
   p {
     font-size: 12px;
     font-weight: 300;
@@ -19,21 +35,8 @@
     }
   }
 
-  h2 {
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 32px;
-  }
-  &__container {
-    margin: 32px;
-    color: var(--white);
-    @media (--desktop) {
-      max-width: 1200px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
 
+ 
   &__desktop {
     @media (--desktop) {
       display: grid;
@@ -73,7 +76,6 @@
       li {
         &:hover {
           color: var(--orange);
-     
         }
       }
     }
@@ -108,7 +110,7 @@
         width: 100%;
         height: 1px;
         opacity: 0.3;
-  background: linear-gradient(93.31deg, #9469FE 0%, #FF79E0 48.96%, #FFBEA7 93.23%);
+        background: linear-gradient(93.31deg, #9469fe 0%, #ff79e0 48.96%, #ffbea7 93.23%);
       }
     }
   }

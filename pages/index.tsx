@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from '../styles/Home.module.css';
 import HomeContainer from '../containers/HomeContainer';
+import FooterContainer from '../containers/FooterContainer';
 
 const Home: NextPage = () => {
   return (

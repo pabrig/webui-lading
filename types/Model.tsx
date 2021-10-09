@@ -18,3 +18,13 @@ export interface FooterTypes {
   followme: string;
   description_footer: string;
 }
+export interface RealityTypes {
+  title: string;
+  description: string;
+}
+export interface FloatingTypes {
+  green_flash_mob: string;
+  green_flash_desk: string;
+  orange_flash_mob: string;
+  orange_flash_desk: string;
+}

@@ -1,21 +1,16 @@
 import React, { FC } from 'react';
 import styles from '../../styles/Home.module.css';
-import { Hero, Reality, Testimony, Footer } from '../../components';
+import { Footer } from '../../components';
 
 import { Data } from '../../lib/constants';
-const HomeContainer: FC = () => {
+const FooterContainer: FC = () => {
   //Const Data
-  const hero = Data.hero;
-  const reality = Data.reality;
-  const testimony = Data.testimony;
+
   const footer = Data.footer;
 
   return (
-    <div className={styles.home}>
+    <div className={styles.footer}>
       {' '}
-      <Hero title={hero.title} icon={hero.icon} />
-      <Reality title={reality.title} description={reality.description} />
-      <Testimony title={testimony.title} icon={testimony.icon} />
       <Footer
         icon={footer.icon}
         description={footer.description}
@@ -27,4 +22,4 @@ const HomeContainer: FC = () => {
     </div>
   );
 };
-export default HomeContainer;
+export default FooterContainer;
