@@ -41,7 +41,7 @@ const FloatingFlash: FC<FloatingTypes> = ({
       <div className={styles.reality__footer}>
         {/* Mobile */}
         <MediaContextProvider>
-          <Media lessThan="lg">
+          <Media lessThan="desktop">
             <motion.div className={styles.reality__footer_green} variants={imageAnimateVariants}>
               <Image
                 src={green_flash_mob}
@@ -64,7 +64,7 @@ const FloatingFlash: FC<FloatingTypes> = ({
         </MediaContextProvider>
         {/* Desktop */}
         <MediaContextProvider>
-          <Media greaterThanOrEqual="lg">
+          <Media greaterThanOrEqual="desktop">
             <motion.div className={styles.reality__footer_green} variants={imageAnimateVariants}>
               <Image
                 src={green_flash_desk}
