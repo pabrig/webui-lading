@@ -1,6 +1,9 @@
-import React, { FC } from 'react';
+import React, { useRef } from 'react';
 import styles from './Reality.module.css';
 import Image from 'next/image';
+// import { useKeenSlider } from 'keen-slider/react';
+// import 'keen-slider/keen-slider.min.css';
+import { MediaContextProvider, Media } from '../../lib/constants';
 
 const items_cards = [
   {
@@ -42,24 +45,37 @@ const items_cards = [
 ];
 
 const Card = () => {
+  // const [currentSlide, setCurrentSlide] = React.useState(0);
+  // const [sliderRef, slider] = useKeenSlider({
+  //   initial: 0,
+  //   slideChanged(s) {
+  //     setCurrentSlide(s.details().relativeSlide);
+  //   }
+  // });
   return (
-    <ul>
-      <div>
-        {items_cards &&
-          items_cards.map((items, i) => (
-            <li key={i} className={styles.reality__card_item}>
-              <div className={styles.reality__card_image}>
-                <Image src={items.src_icon} width={154} height={154} layout="responsive" />
-              </div>
-              <h3>{items.title}</h3>
-              <p>{items.description}</p>
-              <a href={items.link} target="_blank" rel="noreferrer">
-                <p className={styles.reality__card_redirect}>{items.name}</p>
-              </a>
-            </li>
-          ))}
-      </div>
-    </ul>
+    // Desktop Version
+    <MediaContextProvider>
+      <Media greaterThanOrEqual="desktop">
+        {' '}
+        <ul>
+          <div className={styles.reality__desktop}>
+            {items_cards &&
+              items_cards.map((items, i) => (
+                <li key={i} className={styles.reality__desktop_item}>
+                  <div className={styles.reality__desktop_image}>
+                    <Image src={items.src_icon} width={154} height={154} layout="responsive" />
+                  </div>
+                  <h3>{items.title}</h3>
+                  <p>{items.description}</p>
+                  <a href={items.link} target="_blank" rel="noreferrer">
+                    <p className={styles.reality__desktop_redirect}>{items.name}</p>
+                  </a>
+                </li>
+              ))}
+          </div>
+        </ul>
+      </Media>
+    </MediaContextProvider>
   );
 };
 
