@@ -1,152 +1,134 @@
-.reality{
-    width: 100%;
-    background-color: var(--white);
-    margin: auto 0;
-    list-style: none;
-
-    &__container {
-      
-        text-align: center;
-        color: var(--dark-purple);
-        @media (--desktop) {
-          margin-right: auto;
-          margin-left: auto;
-         
-        }
+.reality {
+  width: 100%;
+  background-color: var(--white);
+  margin: auto 0;
+  list-style: none;
+  &__container {
+    text-align: center;
+    color: var(--dark-purple);
+    @media (--desktop) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  &__header {
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+  h2 {
+    margin: 29px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    text-shadow: 1px 5px 4px rgba(15, 6, 4, 0.33);
+  }
+  h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-shadow: 1px 5px 4px rgba(15, 6, 4, 0.33);
+    &:hover {
+      text-shadow: none;
+    }
+  }
+  p {
+    margin-left: 29px;
+    margin-right: 29px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 28px;
+    text-shadow: 1px 5px 4px rgba(15, 6, 4, 0.33);
+    @media (--desktop) {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+  }
+  ul {
+    display: contents;
+  }
+  li {
+    @media(--desktop) {
+      width: 284px;
+      height: 485px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    &:hover {
+      box-shadow: 3px 5px 25px 4px rgba(161, 161, 161, 0.75);
+      -webkit-box-shadow: 3px 5px 25px 4px rgba(161, 161, 161, 0.75);
+      -moz-box-shadow: 3px 5px 25px 4px rgba(161, 161, 161, 0.75);
+    }
+  }
+  /* Desktop Card styles */
+  &__desktop {
+    @media(--desktop) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &_item {
+      width: 252px;
+      height: 364px;
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 15px;
+    }
+    &_image {
+      margin-top: 38px;
+      width: 154px;
+      height: 154px;
+    }
+    h3 {
+      margin-top: 30px;
+    }
+    p {
+      margin-top: -20px;
+      margin-left: 48px;
+      margin-right: 48px;
+    }
+    &_redirect {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      color: var(--purple);
+    }
+    /* Footer */
+  }
+  &__footer {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    &_green {
+      width: 120px;
+      height: 29px;
+      margin-left: auto;
+      margin-bottom: 10px;
+      @media(--desktop) {
+        width: 476px;
+        height: 34px;
+        box-shadow: 11px 10px 5px -5px rgba(0, 0, 0, 0.64);
+        -webkit-box-shadow: 11px 10px 5px -5px rgba(0, 0, 0, 0.64);
+        -moz-box-shadow: 11px 10px 5px -5px rgba(0, 0, 0, 0.64);
       }
-
-      &__header {
-        margin-top:20px;
-        margin-bottom:45px;
+    }
+    &_orange {
+      width: 140px;
+      height: 18px;
+      margin-right: auto;
+      @media(--desktop) {
+        width: 287px;
+        height: 18px;
+        box-shadow: -3px 10px 5px -5px rgba(0, 0, 0, 0.64);
+        -webkit-box-shadow: -3px 10px 5px -5px rgba(0, 0, 0, 0.64);
+        -moz-box-shadow: -3px 10px 5px -5px rgba(0, 0, 0, 0.64);
       }
-      h2 {
-        margin: 29px;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 34px;
-        text-shadow: 1px 5px 4px rgba(15,6,4,0.33);
-
-      }
-      h3{
-
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 27px;
-text-align: center;
-letter-spacing: -0.02em;
-
-text-shadow: 1px 5px 4px rgba(15,6,4,0.33);
-&:hover{
-  text-shadow: none;
-}
-}
-    
-      p {
-        margin-left: 29px;
-        margin-right: 29px;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 28px;
-        text-shadow: 1px 5px 4px rgba(15,6,4,0.33);
-        @media (--desktop) {
-          font-size: 13px;
-          font-weight: 300;
-          line-height: 28px;
-        }
-      }
-      ul{
-        display: contents;
-      }
-      li {
-        @media(--desktop){
-          width: 284px;
-          height: 485px;
-          border-radius:  15px;
-          cursor: pointer;
-        }
-  
-        &:hover {
-          box-shadow: 3px 5px 25px 4px rgba(161,161,161,0.75);
-          -webkit-box-shadow: 3px 5px 25px 4px rgba(161,161,161,0.75);
-          -moz-box-shadow: 3px 5px 25px 4px rgba(161,161,161,0.75); }
-      }
-
-
-      /* Desktop Card styles */
-      &__desktop{
-        @media(--desktop){
-          display: flex;
-          justify-content: center;
-          align-items:center;     
-}
-
-        &_item{
-         width: 252px;
-         height:364px;
-         display: grid;
-         justify-items: center;
-         grid-template-columns: 1fr;
-         margin-right: auto;
-         margin-left: auto;
-         border-radius: 15px;
-
-}
-        &_image{
-            margin-top:38px;
-            width:154px;
-            height:154px;
-        }
-        h3{
-          margin-top:30px;
-        }
-        p{
-          margin-top:-20px;
-          margin-left:48px;
-          margin-right:48px;
-        }
-        &_redirect{
-          font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 21px;
-color: var(--purple);
-        }
-
-        /* Footer */
-     
-      }
-      &__footer{
-          margin-top:10px;
-          margin-bottom: 40px;
-          &_green{
-       width:120px;
-       height:29px;
-       margin-left: auto;
-       margin-bottom: 10px;
-  
-       @media(--desktop){
-          width:476px;
-          height:34px; 
-          box-shadow: 11px 10px 5px -5px rgba(0,0,0,0.64);
-          -webkit-box-shadow: 11px 10px 5px -5px rgba(0,0,0,0.64);
-          -moz-box-shadow: 11px 10px 5px -5px rgba(0,0,0,0.64);
-       }
-  
-          }
-          &_orange{
-              width:140px;
-              height:18px;
-              margin-right: auto;
-              @media(--desktop){
-                width:287px;
-                height:18px; 
-                box-shadow: -3px 10px 5px -5px rgba(0,0,0,0.64);
-                -webkit-box-shadow: -3px 10px 5px -5px rgba(0,0,0,0.64);
-                -moz-box-shadow: -3px 10px 5px -5px rgba(0,0,0,0.64);      }
-         
-          }
-      }
-    
-
+    }
+  }
 }
