@@ -143,15 +143,31 @@
       margin-right: auto;
       margin-left: auto;
       border-radius: 15px;
+      &:hover {
+        transform: translateY(-30px);
+        transform: translateX(30px);
+        opacity: 0.8;
+        p, h3, h4 {
+          text-shadow: none;
+        }
+      }
     }
     &_image {
       margin-top: 38px;
       width: 154px;
       height: 154px;
-      border-radius: 20px;
       &:hover {
         transform: scale(1.2);
-        z-index: 9;
+        animation: shake 2s infinite;
+        animation-direction: alternate;
+      }
+      @keyframes shake {
+        0% {
+          transform: skewY(5deg);
+        }
+        100% {
+          transform: skewY(-5deg);
+        }
       }
     }
     h3 {
@@ -162,7 +178,7 @@
       margin-left: 48px;
       margin-right: 48px;
     }
-    &_redirect {
+    h4 {
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
