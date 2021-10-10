@@ -89,29 +89,27 @@
   }
   /*Mobile Card styles*/
   &__mobile {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
+    height: 400px;
+    margin-top: 16px;
+    ;
+    margin-bottom: 16px;
+    ;
     &_item {
-      margin: 3rem;
-      Width: 252px;
-      Height: 364px;
+      width: 252px;
+      height: 364px;
+      border-radius: 15px;
+      &:hover {
+        transform: scale(1);
+        box-shadow: -9px 6px 50px 1px rgba(54, 52, 52, 0.69);
+      }
     }
     &_image {
-      margin-top: 32px;
+      padding-top: 16px;
       width: 128px;
       height: 128px;
       border-radius: 20px;
       margin-left: auto;
       margin-right: auto;
-      &:hover {
-        transform: scale(1.2);
-        z-index: 9;
-      }
     }
     h3 {
       margin-top: 20px;
@@ -130,10 +128,6 @@
       ;
       color: var(--purple);
     }
-  }
-  .swiper-slide {
-    Width: 252px;
-    Height: 364px;
   }
   /* Desktop Card styles */
   &__desktop {
