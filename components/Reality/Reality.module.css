@@ -18,6 +18,7 @@
   &__footer {
     margin-top: 10px;
     margin-bottom: 40px;
+    z-index: 1;
     &_green {
       width: 120px;
       height: 29px;
@@ -86,13 +87,59 @@
       box-shadow: 3px 5px 25px 4px rgba(161, 161, 161, 0.75);
     }
   }
+  /*Mobile Card styles*/
+  &__mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    &_item {
+      margin: 3rem;
+      Width: 252px;
+      Height: 364px;
+    }
+    &_image {
+      margin-top: 32px;
+      width: 128px;
+      height: 128px;
+      border-radius: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      &:hover {
+        transform: scale(1.2);
+        z-index: 9;
+      }
+    }
+    h3 {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 5px;
+      margin-left: 48px;
+      margin-right: 48px;
+    }
+    &_redirect {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 10px;
+      ;
+      color: var(--purple);
+    }
+  }
+  .swiper-slide {
+    Width: 252px;
+    Height: 364px;
+  }
   /* Desktop Card styles */
   &__desktop {
-    @media(--desktop) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &_item {
       width: 252px;
       height: 364px;
@@ -110,6 +157,7 @@
       border-radius: 20px;
       &:hover {
         transform: scale(1.2);
+        z-index: 9;
       }
     }
     h3 {

@@ -120,3 +120,42 @@ export const items_social = [
     src_icon: '/icons/icon_tw.svg'
   }
 ];
+
+export const items_cards = [
+  {
+    id: '1',
+    src_icon: '/images/reality/icon_hand.jpg',
+    title: 'Financiaimento Directo',
+    description:
+      'Pensado en empresas que necesiten financiar sus cuentas por cobrar o una alternativa al factoring.',
+    link: '/',
+    name: 'Explorar'
+  },
+  {
+    id: '2',
+    src_icon: '/images/reality/icon_touch.jpg',
+    title: 'Pronto Pago',
+    description:
+      'Similar al Financiamiento Directo pero sin retención, sin costos adicionales por mora y por el 100% de tu factura.',
+    link: '/',
+    name: 'Explorar'
+  },
+  {
+    id: '3',
+    src_icon: '/images/reality/icon_one.jpg',
+    title: 'Crédito de capital',
+    description:
+      'Para aquellos que buscan potenciar su negocio financiando ordenes de compra o inversión en crecimiento.',
+    link: '/',
+    name: 'Explorar'
+  },
+  {
+    id: '4',
+    src_icon: '/images/reality/icon_money.jpg',
+    title: 'Confirming',
+    description:
+      'Pensado para Grandes Empresas y Corporativos que necesiten extender el plazo de sus cuentas por pagar.',
+    link: '/',
+    name: 'Explorar'
+  }
+];
