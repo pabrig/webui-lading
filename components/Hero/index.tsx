@@ -1,12 +1,19 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styles from './Hero.module.css';
 import { HeroTypes } from '../../types/Model';
-import Image from 'next/image';
 import FloatingHeroFlash from './FloatingHeroFlash';
+import Button from './Button';
 import { Data } from '../../lib/constants';
 
 const Hero: FC<HeroTypes> = ({ title, description }) => {
   const hero = Data.hero;
+  const [state, setState] = useState('idle');
+  const onClickHandler = () => {
+    setState('chau');
+    setTimeout(() => {
+      setState('success');
+    }, 2000);
+  };
   return (
     <div className={styles.hero}>
       <div className={styles.hero__container}>
@@ -16,6 +23,7 @@ const Hero: FC<HeroTypes> = ({ title, description }) => {
         <div className={styles.hero__description}>
           <p dangerouslySetInnerHTML={{ __html: description }} />
         </div>
+        <Button />
         <FloatingHeroFlash
           yellow_flash_mob={hero.yellow_flash_mob}
           yellow_flash_desk={hero.yellow_flash_desk}

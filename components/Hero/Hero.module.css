@@ -52,13 +52,54 @@
             line-height: 32px;
         }
     }
+    &__button {
+        position: absolute;
+        width: 238px;
+        height: 55px;
+        padding: 12px 25px;
+        outline: none;
+        background: linear-gradient(93.31deg, #9469FE 0%, #FF79E0 48.96%, #FFBEA7 93.23%);
+        color: #fff;
+        border: 1px solid #7847F2;
+        top: 32rem;
+        left: 12.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+        &_description {
+            width: 150px;
+            margin-top: -5px;
+            margin-left: -2rem;
+            p {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+        &_container {
+            width: 53px;
+            height: 53px;
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            right: 0;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            &_arrow {
+                width: 1rem;
+                margin: auto;
+                margin-top: 1rem;
+            }
+        }
+    }
     &__floating {
         position: relative;
         &_yellow {
             width: 17px;
             height: 117px;
             position: absolute;
-            top: 0;
+            top: -25rem;
             right: 3rem;
             @media(--desktop) {
                 width: 17px;
@@ -78,13 +119,16 @@
                 width: 265px;
                 height: 49px;
                 position: absolute;
-                top: 40rem;
+                top: 35rem;
                 right: 1rem;
             }
         }
         &_purple {
             width: 18.55px;
             height: 84px;
+            position: absolute;
+            top: 35rem;
+            right: 1rem;
             @media(--desktop) {
                 width: 28px;
                 height: 103px;
@@ -136,7 +180,6 @@
             left: -1rem;
             top: -1rem;
             position: absolute;
-            z-index: 9999;
         }
     }
 }
