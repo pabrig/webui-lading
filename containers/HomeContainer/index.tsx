@@ -12,8 +12,8 @@ const HomeContainer: FC = () => {
 
   return (
     <div className={styles.home}>
-      {' '}
       <Hero title={hero.title} description={hero.description} />
+
       <Reality title={reality.title} description={reality.description} />
       <Testimony title={testimony.title} icon={testimony.icon} />
       <Footer
