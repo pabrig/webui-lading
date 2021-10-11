@@ -21,7 +21,11 @@ export const Data = {
     purple_flash_mob: '/images/hero/purple_flash_mobile.svg',
     purple_flash_desk: '/images/hero/purple_flash_desktop.svg',
     big_money: '/images/hero/big_money.png',
-    money: '/images/hero/money.svg'
+    money: '/images/hero/money.svg',
+    bg_hero: '/images/hero/background_hero.png',
+    star: '/images/hero/star.png',
+    elipse: '/images/hero/elipse.png',
+    elipse_hero: '/images/hero/elipse_header.svg'
   },
   reality: {
     title: '¿Cómo lo hacemos realidad?',

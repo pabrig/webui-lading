@@ -25,6 +25,10 @@ const Hero: FC<HeroTypes> = ({ title, description }) => {
           pink_flash_desk={hero.pink_flash_desk}
           big_money={hero.big_money}
           money={hero.money}
+          star={hero.star}
+          bg_hero={hero.bg_hero}
+          elipse={hero.elipse}
+          elipse_hero={hero.elipse_hero}
         />
       </div>
     </div>

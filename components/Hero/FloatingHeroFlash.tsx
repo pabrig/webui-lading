@@ -9,14 +9,16 @@ import { motion, Transition } from 'framer-motion';
 
 const SpringTransition: Transition = {
   type: 'spring',
-  duration: 1
+  duration: 7
 };
 const YoYoTransition: Transition = {
   yoyo: Infinity,
   duration: 2
 };
 const RotateTransition: Transition = {
-  duration: 1
+  yoyo: Infinity,
+  duration: 2,
+  ease: 'easeOut'
 };
 
 const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
@@ -27,7 +29,11 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
   purple_flash_desk,
   yellow_flash_desk,
   big_money,
-  money
+  money,
+  star,
+  bg_hero,
+  elipse,
+  elipse_hero
 }) => {
   return (
     <motion.div className={styles.floating}>
@@ -115,6 +121,30 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
               animate={{ y: 10, x: 10 }}
               transition={YoYoTransition}>
               <Image src={big_money} alt="flash_pink" width={98} height={110} layout="responsive" />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_star}
+              animate={{ rotate: 360 }}
+              transition={RotateTransition}>
+              <Image src={star} alt="star" width={566} height={609} layout="responsive" />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_elipse}
+              animate={{ x: -10 }}
+              transition={SpringTransition}>
+              <Image src={elipse} alt="elipse" width={441} height={469} layout="responsive" />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_elipse_hero}
+              animate={{ x: -10 }}
+              transition={SpringTransition}>
+              <Image src={elipse_hero} alt="elipse" width={330} height={351} layout="responsive" />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_bg_hero}
+              animate={{ x: -10 }}
+              transition={SpringTransition}>
+              <Image src={bg_hero} alt="bg_hero" width={52} height={58} layout="responsive" />
             </motion.div>
           </Media>
         </MediaContextProvider>

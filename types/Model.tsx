@@ -37,4 +37,8 @@ export interface FloatingHeroTypes {
   purple_flash_desk: string;
   big_money: string;
   money: string;
+  bg_hero: string;
+  star: string;
+  elipse: string;
+  elipse_hero: string;
 }
