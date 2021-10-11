@@ -5,7 +5,13 @@ import Image from 'next/image';
 
 const Button = () => {
   return (
-    <button className={styles.hero__button}>
+    <motion.button
+      className={styles.hero__button}
+      whileHover={{
+        scale: 1.2,
+        transition: { duration: 1 }
+      }}
+      whileTap={{ scale: 0.9 }}>
       <div className={styles.hero__button_description}>
         {' '}
         <p> Empieza a financiarte</p>
@@ -22,7 +28,7 @@ const Button = () => {
           />
         </div>
       </div>
-    </button>
+    </motion.button>
   );
 };
 
