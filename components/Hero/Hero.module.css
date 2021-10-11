@@ -1,5 +1,109 @@
-.hero{
-    width:100%;
-    height:100vh;
-    background-color:var(--purple);
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-purple);
+    &__container {
+        margin: 29px;
+        color: var(--white)
+    }
+    &__title {
+        width: 161px;
+        height: 118px;
+        margin-top: 115px;
+        @media(--desktop) {
+            position: absolute;
+            width: 434.54px;
+            height: 201.78px;
+            left: 204.13px;
+            top: 80.83px;
+        }
+    }
+    &__description {
+        width: 291px;
+        height: 84px;
+        margin-top: 80px;
+        @media(--desktop) {
+            position: absolute;
+            width: 434.54px;
+            height: 201.78px;
+            left: 204.13px;
+            top: 350.83px;
+        }
+    }
+    h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 48px;
+        /* or 133% */
+        letter-spacing: -0.02em;
+        @media(--desktop) {
+            font-size: 58px;
+            line-height: 70px;
+        }
+    }
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 28px;
+        @media(--desktop) {
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+    &__floating {
+        &_yellow {
+            width: 17px;
+            height: 117px;
+            position: absolute;
+            top: 0;
+            right: 3rem;
+            @media(--desktop) {
+                width: 17px;
+                height: 98px;
+                position: absolute;
+                top: 0;
+                right: 30rem;
+            }
+        }
+        &_pink {
+            width: 153px;
+            height: 37px;
+            top: 0;
+            right: 0rem;
+            @media(--desktop) {
+                width: 265px;
+                height: 49px;
+                position: absolute;
+                top: 30rem;
+                right: 5rem;
+            }
+        }
+        &_purple {
+            width: 18.55px;
+            height: 84px;
+            @media(--desktop) {
+                width: 28px;
+                height: 103px;
+                position: absolute;
+                bottom: 0;
+                left: 10rem;
+            }
+        }
+        &_big_money {
+            width: 98px;
+            height: 110px;
+            left: 50rem;
+            bottom: 5rem;
+            position: absolute;
+        }
+        &_money {
+            width: 80px;
+            height: 64px;
+            right: 10rem;
+            top: 10rem;
+            position: absolute;
+        }
+    }
 }

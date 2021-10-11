@@ -1,6 +1,6 @@
 export interface HeroTypes {
   title: string;
-  icon: string;
+  description: string;
 }
 export interface AboutTypes {
   title: string;
@@ -27,4 +27,14 @@ export interface FloatingTypes {
   green_flash_desk: string;
   orange_flash_mob: string;
   orange_flash_desk: string;
+}
+export interface FloatingHeroTypes {
+  yellow_flash_mob: string;
+  yellow_flash_desk: string;
+  purple_flash_mob: string;
+  pink_flash_mob: string;
+  pink_flash_desk: string;
+  purple_flash_desk: string;
+  big_money: string;
+  money: string;
 }

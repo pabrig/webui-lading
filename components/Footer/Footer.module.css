@@ -7,7 +7,6 @@
   @media (--desktop) {
     height: auto !important;
   }
-
   &__container {
     margin: 29px;
     color: var(--white);
@@ -17,13 +16,11 @@
       margin-left: auto;
     }
   }
-
   h2 {
     font-size: 12px;
     font-weight: 600;
     line-height: 32px;
   }
-
   p {
     font-size: 12px;
     font-weight: 300;
@@ -34,9 +31,6 @@
       line-height: 28px;
     }
   }
-
-
- 
   &__desktop {
     @media (--desktop) {
       display: grid;
@@ -44,7 +38,6 @@
       justify-items: center;
     }
   }
-
   &__logo {
     width: 85px;
     height: 23px;
@@ -53,19 +46,16 @@
       margin-left: 32px;
     }
   }
-
   &__description {
     width: 314px;
     height: 81px;
     margin-top: 20px;
   }
-
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
     margin-top: 28px;
-
     ul {
       display: contents;
       p {
@@ -80,7 +70,6 @@
       }
     }
   }
-
   &__social {
     margin-top: 36px;
     &_items {
@@ -91,14 +80,12 @@
       width: 24px;
       height: 24px;
       margin-right: 12px;
-
       &:hover {
         background-color: var(--orange);
         border-radius: 50%;
       }
     }
   }
-
   &__footer {
     margin-top: 70px;
     margin-bottom: 16px;
