@@ -1,4 +1,4 @@
-export interface HeroTypes {
+export interface HeaderTypes {
   icon: string;
   link_solutions: string;
   link_about: string;

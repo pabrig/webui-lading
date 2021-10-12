@@ -12,7 +12,7 @@ export const { MediaContextProvider, Media } = createMedia({
 /* Data Info */
 export const Data = {
   header: {
-    icon: '/images/hero/icon_xepelin.svg',
+    icon: '/icons/icon_xepelin.svg',
     link_solutions: 'Soluciones',
     link_about: 'Sobre nosotros',
     link_resource: 'Recursos',
