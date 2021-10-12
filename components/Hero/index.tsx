@@ -3,18 +3,15 @@ import styles from './Hero.module.css';
 import { HeroTypes } from '../../types/Model';
 import FloatingHeroFlash from './FloatingHeroFlash';
 import Button from './Button';
+import NavBar from '../Header';
 import { Data } from '../../lib/constants';
-import { useViewportScroll, motion, useTransform, useMotionValue } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Hero: FC<HeroTypes> = ({ title, description }) => {
   const hero = Data.hero;
-  const { scrollY } = useViewportScroll();
-  const y1 = useTransform(scrollY, [0, 300], [0, 200]);
-  const y2 = useTransform(scrollY, [0, 300], [0, -100]);
 
   const [ref, inView, entry] = useInView({
-    /* Optional options */
     threshold: 0.5,
     triggerOnce: false
   });

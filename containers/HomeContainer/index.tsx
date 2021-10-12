@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styles from '../../styles/Home.module.css';
-import { Hero, Reality, Testimony, Footer } from '../../components';
+import { Header, Hero, Reality, Testimony, Footer } from '../../components';
 
 import { Data } from '../../lib/constants';
 const HomeContainer: FC = () => {
@@ -12,6 +12,7 @@ const HomeContainer: FC = () => {
 
   return (
     <div className={styles.home}>
+      <Header />
       <Hero title={hero.title} description={hero.description} />
 
       <Reality title={reality.title} description={reality.description} />

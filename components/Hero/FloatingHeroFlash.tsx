@@ -4,7 +4,6 @@ import { FloatingHeroTypes } from '../../types/Model';
 import Image from 'next/image';
 import { MediaContextProvider, Media } from '../../lib/constants';
 import { motion, Transition } from 'framer-motion';
-import { useSpring, animated } from 'react-spring';
 
 //Animations
 
@@ -36,8 +35,6 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
   elipse,
   elipse_hero
 }) => {
-  const [{ y, color }, set] = useSpring(() => ({ y: 100, color: '#fff' }));
-
   return (
     <motion.div className={styles.floating}>
       <div className={styles.hero__floating}>
