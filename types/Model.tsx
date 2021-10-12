@@ -1,4 +1,13 @@
 export interface HeroTypes {
+  icon: string;
+  link_solutions: string;
+  link_about: string;
+  link_resource: string;
+  link_job: string;
+  link_signin: string;
+  link_register: string;
+}
+export interface HeroTypes {
   title: string;
   description: string;
 }

@@ -1,5 +1,6 @@
 import { createMedia } from '@artsy/fresnel';
-// breakpoints values can be either strings or integers
+
+/* breakpoints Media */
 export const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
     mobile: 0,
@@ -8,8 +9,17 @@ export const { MediaContextProvider, Media } = createMedia({
   }
 });
 
-/*Info */
+/* Data Info */
 export const Data = {
+  header: {
+    icon: '/images/hero/icon_xepelin.svg',
+    link_solutions: 'Soluciones',
+    link_about: 'Sobre nosotros',
+    link_resource: 'Recursos',
+    link_job: 'Job Board',
+    link_signin: 'Ingresar',
+    link_register: 'Registrarse'
+  },
   hero: {
     title: 'Financia el sueño de tu empresa',
     description:

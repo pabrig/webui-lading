@@ -1,9 +1,18 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Media, MediaContextProvider } from '../../lib/constants';
+import { HeroTypes } from '../../types/Model';
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({
+  icon,
+  link_solutions,
+  link_about,
+  link_resource,
+  link_job,
+  link_signin,
+  link_register
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
   return (
@@ -11,7 +20,7 @@ const Header = () => {
       <header className={styles.header}>
         <nav className={styles.navbar}>
           <Link href="/">
-            <a className={styles.navlogo}>[Logo]</a>
+            <a className={styles.navlogo}>{icon}</a>
           </Link>
           <ul className={isOpen === false ? styles.navmenu : styles.navmenu + ' ' + styles.active}>
             <li className={styles.navitem}>
@@ -21,7 +30,7 @@ const Header = () => {
                     isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                   }
                   onClick={openMenu}>
-                  Home
+                  {link_solutions}
                 </a>
               </Link>
             </li>
@@ -32,7 +41,7 @@ const Header = () => {
                     isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                   }
                   onClick={openMenu}>
-                  About
+                  {link_about}
                 </a>
               </Link>
             </li>
@@ -43,10 +52,11 @@ const Header = () => {
                     isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                   }
                   onClick={openMenu}>
-                  Contact
+                  {link_job}
                 </a>
               </Link>
             </li>
+
             <MediaContextProvider>
               <Media greaterThanOrEqual="desktop">
                 <li className={styles.navitem}>
@@ -57,7 +67,7 @@ const Header = () => {
                           isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                         }
                         onClick={openMenu}>
-                        BUtton
+                        {link_signin}
                       </a>
                     </Link>
                   </button>
@@ -70,7 +80,7 @@ const Header = () => {
                           isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                         }
                         onClick={openMenu}>
-                        BUtton
+                        {link_register}
                       </a>
                     </Link>
                   </button>
