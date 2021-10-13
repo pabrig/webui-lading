@@ -12,7 +12,6 @@ export const { MediaContextProvider, Media } = createMedia({
 /* Data Info */
 export const Data = {
   header: {
-    icon: '/icons/icon_xepelin.svg',
     link_solutions: 'Soluciones',
     link_about: 'Sobre nosotros',
     link_resource: 'Recursos',
@@ -55,7 +54,7 @@ export const Data = {
   footer: {
     description:
       'Soñamos con un mercado en donde no existan barreras de entradas para el financiamiento de las pymes en Latinoamérica.',
-    icon: '/icons/icon_xepelin.svg',
+
     solutions: 'Soluciones',
     explorer: 'Explorar',
     followme: 'Síguenos',

@@ -1,58 +1,42 @@
-
 :root {
   /* Colors vars */
   --purple: #7847F2;
-  --dark-purple:#141531;
-  --black:#0000;
-  --white:#FFFFFF;
-  --green:#99D5AA;
-  --orange:#EA8432;
+  --dark-purple: #141531;
+  --black: #0000;
+  --white: #FFFFFF;
+  --green: #99D5AA;
+  --orange: #EA8432;
 }
 
-
-
 /* Remove default padding */
-ul[class],
-ol[class] {
+
+ul[class], ol[class] {
   padding: 0;
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-dl,
-dd {
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, dl, dd {
   margin: 0;
 }
+
 /* Remove default list-style */
-ul{
+
+ul {
   list-style: none;
 }
 
 /* Set core body defaults */
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  /* cambiar tipografia */
   font-family: 'Roboto', sans-serif;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /* iPhone styles */
-  @supports (-webkit-touch-callout: none) {
-    min-height: -webkit-fill-available;
-  }
+  background-color: var(--dark-purple);
 }
-
 
 /* A elements that don't have a class get default styles */
 
@@ -61,18 +45,16 @@ a {
   color: inherit;
 }
 
-
 /* Make images easier to work with */
+
 img {
   max-width: 100%;
   display: block;
 }
 
-
 button {
   padding: 0;
 }
-
 
 input {
   outline: 0;
@@ -86,5 +68,3 @@ button {
 [class*='--round'] {
   border-radius: 100%;
 }
-
-
