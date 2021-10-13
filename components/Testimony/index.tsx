@@ -3,11 +3,15 @@ import styles from './Testimony.module.css';
 import { TestimonyTypes } from '../../types/Model';
 import Image from 'next/image';
 
-const Testimony: FC<TestimonyTypes> = ({ title, icon }) => {
+const Testimony: FC<TestimonyTypes> = ({ title, description }) => {
   return (
-    <div className={styles.Testimony}>
-      <h2>{title}</h2>
-      {/* <Image src={icon} alt="icon_xepelin" layout="fill" width="100" height="100" /> */}
+    <div className={styles.testimony}>
+      <div className={styles.testimony_container}>
+        <div className={styles.reality__header}>
+          <h2 dangerouslySetInnerHTML={{ __html: title }} />
+          <p dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
+      </div>
     </div>
   );
 };

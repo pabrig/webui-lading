@@ -1,4 +1,5 @@
 export interface HeaderTypes {
+  icon: string;
   link_solutions: string;
   link_about: string;
   link_resource: string;
@@ -16,7 +17,7 @@ export interface AboutTypes {
 }
 export interface TestimonyTypes {
   title: string;
-  icon: string;
+  description: string;
 }
 export interface FooterTypes {
   description: string;

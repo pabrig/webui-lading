@@ -12,6 +12,7 @@ export const { MediaContextProvider, Media } = createMedia({
 /* Data Info */
 export const Data = {
   header: {
+    icon: '/icons/icon_xepelin.svg',
     link_solutions: 'Soluciones',
     link_about: 'Sobre nosotros',
     link_resource: 'Recursos',
@@ -47,8 +48,9 @@ export const Data = {
   },
 
   testimony: {
-    title: 'Testimony',
-    icon: '/public/images/hero/icon_xepelin.svg'
+    title: '¿Qué dicen nuestros clientes?',
+    description:
+      'La Fintech chilena especializada en servicios financieros para pequeñas y medianas empresas en Latinoaméricac'
   },
 
   footer: {
@@ -61,7 +63,33 @@ export const Data = {
     description_footer: '<strong>&copy 2020 Xepelin</strong> Con amor para las pymes'
   }
 };
-
+// export const items_header = [
+//   {
+//     id: '1',
+//     title: 'Soluciones',
+//     link: '/'
+//   },
+//   {
+//     id: '1',
+//     title: 'Sobre nosotros',
+//     link: '/'
+//   },
+//   {
+//     id: '1',
+//     title: 'Recursos',
+//     link: '/'
+//   },
+//   {
+//     id: '1',
+//     title: 'Job Board',
+//     link: '/'
+//   },
+//   {
+//     id: '1',
+//     title: 'Registrarse',
+//     link: '/'
+//   }
+// ];
 export const items_solutions = [
   {
     name: 'Financiamento directo',
