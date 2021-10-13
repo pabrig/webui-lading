@@ -44,7 +44,7 @@
 }
 
 .navlink:hover {
-    color: #482ff7;
+    color: var(--orange);
 }
 
 .buttons {
