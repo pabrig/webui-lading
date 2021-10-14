@@ -2,48 +2,9 @@ import React, { FC, useState } from 'react';
 import styles from './Testimony.module.css';
 import { TestimonyTypes } from '../../types/Model';
 import Image from 'next/image';
+import { items_testimony } from '../../lib/constants';
 
 const Testimony: FC<TestimonyTypes> = ({ title, description }) => {
-  const [isActive, setIsActive] = useState(false);
-  const accordionData = [
-    {
-      title: 'Section 1',
-      content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore, hic temporibus velit dicta earum
-      suscipit commodi eum enim atque at? Et perspiciatis dolore iure
-      voluptatem.`
-    },
-    {
-      title: 'Section 2',
-      content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
-      reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
-      quaerat iure quos dolorum accusantium ducimus in illum vero commodi
-      pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
-      quidem maiores doloremque est numquam praesentium eos voluptatem amet!
-      Repudiandae, mollitia id reprehenderit a ab odit!`
-    },
-    {
-      title: 'Section 3',
-      content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
-      quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
-      dolor ut sequi minus iste? Quas?`
-    }
-  ];
-  const { content } = accordionData;
-  const Accordion = ({ content }) => {
-    const [isActive, setIsActive] = useState(false);
-
-    return (
-      <div className="accordion-item">
-        <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-          <div>{title}</div>
-          <div>{isActive ? '-' : '+'}</div>
-        </div>
-        {isActive && <div className="accordion-content">{content}</div>}
-      </div>
-    );
-  };
-
   return (
     <div className={styles.testimony}>
       <div className={styles.testimony_container}>
@@ -51,12 +12,96 @@ const Testimony: FC<TestimonyTypes> = ({ title, description }) => {
           <h2 dangerouslySetInnerHTML={{ __html: title }} />
           <p dangerouslySetInnerHTML={{ __html: description }} />
         </div>
-        <div className={styles.accordion}>
-          <div className="accordion">
-            {accordionData.map(({ title, content }) => (
-              <Accordion title={title} content={content} />
-            ))}
-          </div>
+        <div className={styles.container}>
+          <ul className={styles.accordion}>
+            <li className={styles.items}>
+              <div className={styles.icon}>
+                <p href="">Andrés Rosales</p>
+                <div className={styles.paragraph_image}>
+                  {' '}
+                  <Image
+                    src={'/images/testimony/image_1.jpeg'}
+                    alt={'alt'}
+                    width={15}
+                    height={15}
+                    layout="responsive"
+                  />
+                </div>
+              </div>
+              <p>Gerente general de Sacer Spa</p>
+              <div className={styles.paragraph}>
+                <h1>La Mejor Experiencia</h1>
+                <p>
+                  “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
+                  necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por
+                  eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros.
+                  Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que
+                  nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar
+                  materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de
+                  soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva
+                  el emprender con un negocio de manera autónoma
+                </p>
+              </div>
+            </li>
+            <li className={styles.items}>
+              <div className={styles.icon}>
+                <p href="">Andrés Rosales</p>
+                <div className={styles.paragraph_image}>
+                  {' '}
+                  <Image
+                    src={'/images/testimony/image_1.jpeg'}
+                    alt={'alt'}
+                    width={15}
+                    height={15}
+                    layout="responsive"
+                  />
+                </div>
+              </div>
+              <p>Gerente general de Sacer Spa</p>
+              <div className={styles.paragraph}>
+                <h1>La Mejor Experiencia</h1>
+                <p>
+                  “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
+                  necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por
+                  eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros.
+                  Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que
+                  nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar
+                  materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de
+                  soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva
+                  el emprender con un negocio de manera autónoma
+                </p>
+              </div>
+            </li>
+            <li className={styles.items}>
+              <div className={styles.icon}>
+                <p href="">Andrés Rosales</p>
+                <div className={styles.paragraph_image}>
+                  {' '}
+                  <Image
+                    src={'/images/testimony/image_1.jpeg'}
+                    alt={'alt'}
+                    width={15}
+                    height={15}
+                    layout="responsive"
+                  />
+                </div>
+              </div>
+              <p>Gerente general de Sacer Spa</p>
+              <div className={styles.paragraph}>
+                <h1>La Mejor Experiencia</h1>
+                <p>
+                  “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
+                  necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por
+                  eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros.
+                  Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que
+                  nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar
+                  materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de
+                  soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva
+                  el emprender con un negocio de manera autónoma
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

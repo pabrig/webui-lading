@@ -35,128 +35,94 @@
     }
 }
 
-/* Acordion */
+/* Acordion  */
+
+.container {
+    margin: 100px auto;
+}
 
 .accordion {
-    box-sizing: border-box;
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    background: $border;
     width: 100%;
+    min-width: 950px;
+    display: block;
+    list-style-type: none;
+    overflow: hidden;
+    height: 200px;
+    font-size: 0;
 }
 
-.accordion_select {
-    cursor: pointer;
+.items {
+    display: inline-block;
+    background-color: $list;
+    border-right: $border 1px solid;
+    width: 80px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
     margin: 0;
-    opacity: 0;
-    z-index: 1;
-}
-
-.accordion_title {
-    position: relative;
-}
-
-.accordion_title:not(:nth-last-child(2))::after {
-    border: 1px solid transparent;
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.accordion_title span {
-    bottom: 0px;
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.accordion_content {
-    box-sizing: border-box;
-    overflow: auto;
-    position: relative;
-    transition: margin 0.3s ease 0.1s;
-}
-
-.accordion_select:checked+.accordion-title+.accordion-content {
-    margin-bottom: 0;
-    margin-right: 0;
-}
-
-/* Generated styles starts here */
-
-.accordian {
-    width: 805px;
-    height: 320px;
-    overflow: hidden;
-    /*Time for some styling*/
-    margin: 100px auto;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-    -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-}
-
-/*A small hack to prevent flickering on some browsers*/
-
-.accordian ul {
-    width: 2000px;
-    /*This will give ample space to the last item to move
-    instead of falling down/flickering during hovers.*/
-}
-
-.accordian li {
-    position: relative;
-    display: block;
-    width: 160px;
-    float: left;
-    border-left: 1px solid #888;
-    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-    /*Transitions to give animation effect*/
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    /*If you hover on the images now you should be able to 
-    see the basic accordian*/
-}
-
-/*Reduce with of un-hovered elements*/
-
-.accordian ul:hover li {
-    width: 40px;
-}
-
-/*Lets apply hover effects now*/
-
-/*The LI hover style should override the UL hover style*/
-
-.accordian ul li:hover {
-    width: 640px;
-}
-
-.accordian li img {
-    display: block;
-}
-
-/*Image title styles*/
-
-.image_title {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 640px;
-}
-
-.image_title a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 20px;
     font-size: 16px;
+    @include transition( all 0.4s 0.1s ease-in-out);
+    &:hover {
+        width: 450px;
+        .social-links {
+            a {
+                &:before {
+                    margin-left: -100px;
+                }
+                &:after {
+                    margin-left: -5px;
+                }
+            }
+        }
+    }
+    .paragraph {
+        position: relative;
+        width: 360px;
+        margin-left: 80px;
+        padding: 50px 0 0 10px;
+        height: 200px;
+        background: #fff;
+        &_image {
+            width: 15px;
+            height: 15px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 0.88em;
+            line-height: 1.5em;
+            padding-right: 30px;
+        }
+    }
+}
+
+.social-links {
+    display: block;
+    a {
+        display: block;
+        text-indent: -9999px;
+        font-size: 0;
+        line-height: 0;
+        &:before, &:after {
+            @include transition( all 0.4s 0.1s ease-in-out);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            text-indent: 0;
+            padding-top: 90px;
+            padding-left: 25px;
+            display: block;
+            font: normal 30px Genericons;
+            color: $geneicons;
+        }
+        &:after {
+            font-size: 48px;
+            padding-left: 20px;
+            padding-top: 80px;
+            margin-left: 85px;
+        }
+    }
 }
