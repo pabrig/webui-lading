@@ -1,10 +1,7 @@
 import React, { FC, useState } from 'react';
 import styles from './Testimony.module.css';
 import { TestimonyTypes } from '../../types/Model';
-import Card from './Card';
-
-import Image from 'next/image';
-import { items_testimony } from '../../lib/constants';
+import Card from './CardDesktop';
 
 const Testimony: FC<TestimonyTypes> = ({ title, description }) => {
   return (

@@ -1,110 +1,16 @@
-import React, { FC, useState } from 'react';
-import styles from './Testimony.module.css';
+import React, { useState, useRef } from 'react';
+import styles from './Reality.module.css';
 import Image from 'next/image';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import { items_testimony } from '../../lib/constants';
+import { MediaContextProvider, Media } from '../../lib/constants';
+import CardDesktop from './CardDesktop';
 
 const Card = () => {
   return (
-    <Tabs className={styles.card__container}>
-      <TabList>
-        <Tab>
-          <div className={styles.card__header}>
-            <div className={styles.card__image}>
-              <Image
-                src={'/images/testimony/image_1.jpeg'}
-                alt="icon_testimony"
-                width={70}
-                height={70}
-                layout="responsive"
-              />
-            </div>
-            <h2>Andrés Rosales</h2>
-            <p>Gerente general de Sacer Spa</p>
-          </div>
-        </Tab>
-        <Tab>
-          <div className={styles.card__header}>
-            <div className={styles.card__image}>
-              <Image
-                src={'/images/testimony/image_2.jpeg'}
-                alt="icon_testimony"
-                width={70}
-                height={70}
-                layout="responsive"
-              />
-            </div>
-            <h2>Andrés Rosales</h2>
-            <p>Gerente general de Sacer Spa</p>
-          </div>
-        </Tab>
-        <Tab>
-          <div className={styles.card__header}>
-            <div className={styles.card__image}>
-              <Image
-                src={'/images/testimony/image_2.jpeg'}
-                alt="icon_testimony"
-                width={70}
-                height={70}
-                layout="responsive"
-              />
-            </div>
-            <h2>Andrés Rosales</h2>
-            <p>Gerente general de Sacer Spa</p>
-          </div>
-        </Tab>
-      </TabList>
-
-      <TabPanel>
-        <h2>La Mejor Experiencia</h2>
-        <p>
-          “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
-          necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso
-          también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta
-          alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar
-          sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7
-          meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido
-          cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
-          autónoma
-        </p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
-      </TabPanel>
-      <TabPanel>
-        <h2>La Mejor Experiencia</h2>
-        <p>
-          “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
-          necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso
-          también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta
-          alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar
-          sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7
-          meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido
-          cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
-          autónoma
-        </p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
-      </TabPanel>
-      <TabPanel>
-        <h2>La Mejor Experiencia</h2>
-        <p>
-          “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
-          necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso
-          también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta
-          alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar
-          sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7
-          meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido
-          cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
-          autónoma
-        </p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
-      </TabPanel>
-    </Tabs>
+    <MediaContextProvider>
+      <Media greaterThanOrEqual="desktop">
+        <CardDesktop />
+      </Media>
+    </MediaContextProvider>
   );
 };
 
