@@ -99,7 +99,7 @@ const Header: FC<HeaderTypes> = ({
               <Media greaterThanOrEqual="desktop">
                 <div style={{ display: 'flex' }}>
                   <li className={styles.navitem}>
-                    <button className={styles.button_desk}>
+                    <button className={styles.button_black}>
                       <Link href="/">
                         <a
                           className={
@@ -112,7 +112,7 @@ const Header: FC<HeaderTypes> = ({
                     </button>
                   </li>
                   <li className={styles.navitem}>
-                    <button className={styles.button_desk}>
+                    <button className={styles.button_white}>
                       <Link href="/">
                         <a
                           className={
