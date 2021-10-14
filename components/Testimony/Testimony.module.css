@@ -42,7 +42,9 @@
 }
 
 .accordion {
-    background: $border;
+    max-width: 1200px;
+    background-color: var(--white);
+    margin: 0 auto;
     width: 100%;
     min-width: 950px;
     display: block;
@@ -50,9 +52,14 @@
     overflow: hidden;
     height: 200px;
     font-size: 0;
+    border-radius: 15px;
+    box-shadow: 3px 5px 25px 4px rgba(161, 161, 161, 0.75);
 }
 
 .items {
+    position: absolute;
+    width: 477px;
+    height: 127px;
     display: inline-block;
     background-color: $list;
     border-right: $border 1px solid;
@@ -81,7 +88,7 @@
         width: 360px;
         margin-left: 80px;
         padding: 50px 0 0 10px;
-        height: 200px;
+        height: 90px;
         background: #fff;
         &_image {
             width: 15px;
