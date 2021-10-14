@@ -1,10 +1,9 @@
-import React, { FC, useState } from 'react';
 import styles from './Testimony.module.css';
 import Image from 'next/image';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-const CardDesktop = () => {
+const CardMobile = () => {
   return (
     <Tabs className={styles.card__container}>
       <TabList>
@@ -19,8 +18,6 @@ const CardDesktop = () => {
                 layout="responsive"
               />
             </div>
-            <h2>Andrés Rosales</h2>
-            <p>Gerente general de Sacer Spa</p>
           </div>
         </Tab>
         <Tab>
@@ -34,8 +31,6 @@ const CardDesktop = () => {
                 layout="responsive"
               />
             </div>
-            <h2>Carlos Zapata</h2>
-            <p>Gerente general de Zapata Ltda</p>
           </div>
         </Tab>
         <Tab>
@@ -49,8 +44,6 @@ const CardDesktop = () => {
                 layout="responsive"
               />
             </div>
-            <h2>Leonardo Moncada</h2>
-            <p>Ing y MOntajes Cerro Bramador Spa</p>
           </div>
         </Tab>
       </TabList>
@@ -67,11 +60,13 @@ const CardDesktop = () => {
           cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
           autónoma
         </p>
+        <h2>Andrés Rosales</h2>
+        <p>Gerente general de Sacer Spa</p>
         <button className={styles.card__buttons}>
           <p> Conoce más</p>
         </button>
       </TabPanel>
-      <TabPanel className={styles.card__paragraph}>
+      <TabPanel>
         <h2>La Mejor Experiencia</h2>
         <p>
           “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
@@ -83,11 +78,13 @@ const CardDesktop = () => {
           cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
           autónoma
         </p>
+        <h2>Carlos Zapata</h2>
+        <p>Gerente general de Zapata Ltda</p>
         <button className={styles.card__buttons}>
           <p> Conoce más</p>
         </button>
       </TabPanel>
-      <TabPanel className={styles.card__paragraph}>
+      <TabPanel>
         <h2>La Mejor Experiencia</h2>
         <p>
           “En un principio habíamos pensado en acudir a algún banco, pero el problema es que
@@ -99,6 +96,8 @@ const CardDesktop = () => {
           cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
           autónoma
         </p>
+        <h2>Leonardo Moncada</h2>
+        <p>Ing y MOntajes Cerro Bramador Spa</p>
         <button className={styles.card__buttons}>
           <p> Conoce más</p>
         </button>
@@ -107,4 +106,4 @@ const CardDesktop = () => {
   );
 };
 
-export default CardDesktop;
+export default CardMobile;

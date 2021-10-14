@@ -3,7 +3,7 @@ import React, { FC, useState } from 'react';
 import { Media, MediaContextProvider } from '../../lib/constants';
 import { HeaderTypes } from '../../types/Model';
 import styles from './Header.module.css';
-import { items_header } from '../../lib/constants';
+
 import Image from 'next/image';
 const NavBar: FC<HeaderTypes> = ({
   link_solutions,
