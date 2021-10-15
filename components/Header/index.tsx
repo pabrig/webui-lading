@@ -16,22 +16,13 @@ const Header: FC<HeaderTypes> = ({
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
   return (
-    <div className={styles.header}>
-      <nav className={styles.navbar}>
-        <Link href="/">
-          <a className={isOpen === false ? styles.navlogo : styles.navlogo + ' ' + styles.active}>
-            <Image
-              src={'/icons/icon_xepelin.svg'}
-              alt="logo"
-              width={204}
-              height={28}
-              layout="responsive"
-            />
-          </a>
-        </Link>
-        <ul className={isOpen === false ? styles.navmenu : styles.navmenu + ' ' + styles.active}>
-          <MediaContextProvider>
-            {' '}
+    <>
+      <header className={styles.header}>
+        <nav className={styles.navbar}>
+          <Link href="/">
+            <a className={styles.navlogo}>[BrandLogo]</a>
+          </Link>
+          <ul className={isOpen === false ? styles.navmenu : styles.navmenu + ' ' + styles.active}>
             <li className={styles.navitem}>
               <Link href="/">
                 <a
@@ -39,98 +30,33 @@ const Header: FC<HeaderTypes> = ({
                     isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                   }
                   onClick={openMenu}>
-                  {link_solutions}
+                  Home
                 </a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/">
+              <Link href="/about">
                 <a
                   className={
                     isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                   }
                   onClick={openMenu}>
-                  {link_about}
+                  About
                 </a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/">
+              <Link href="/contact">
                 <a
                   className={
                     isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                   }
                   onClick={openMenu}>
-                  {link_resource}
+                  Contact
                 </a>
               </Link>
             </li>
-            <li className={styles.navitem}>
-              <Link href="/">
-                <a
-                  className={
-                    isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                  }
-                  onClick={openMenu}>
-                  {link_job}
-                </a>
-              </Link>
-            </li>
-            <Media lessThan="desktop">
-              <li className={styles.navitem}>
-                <Link href="/">
-                  <a
-                    className={
-                      isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                    }
-                    onClick={openMenu}>
-                    {link_signin}
-                  </a>
-                </Link>
-              </li>
-              <li className={styles.navitem}>
-                <Link href="/">
-                  <a
-                    className={
-                      isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                    }
-                    onClick={openMenu}>
-                    {link_register}
-                  </a>
-                </Link>
-              </li>
-            </Media>
-            <Media greaterThanOrEqual="desktop">
-              <div style={{ display: 'flex' }}>
-                <li className={styles.navitem}>
-                  <button className={styles.button_desk}>
-                    <Link href="/">
-                      <a
-                        className={
-                          isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                        }
-                        onClick={openMenu}>
-                        {link_signin}
-                      </a>
-                    </Link>
-                  </button>
-                </li>
-                <li className={styles.navitem}>
-                  <button className={styles.button_desk}>
-                    <Link href="/">
-                      <a
-                        className={
-                          isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                        }
-                        onClick={openMenu}>
-                        {link_register}
-                      </a>
-                    </Link>
-                  </button>
-                </li>
-              </div>
-            </Media>
-          </MediaContextProvider>
+          </ul>
           <button
             className={isOpen === false ? styles.hamburger : styles.hamburger + ' ' + styles.active}
             onClick={openMenu}>
@@ -138,9 +64,9 @@ const Header: FC<HeaderTypes> = ({
             <span className={styles.bar}></span>
             <span className={styles.bar}></span>
           </button>
-        </ul>
-      </nav>
-    </div>
+        </nav>
+      </header>
+    </>
   );
 };
 export default Header;
