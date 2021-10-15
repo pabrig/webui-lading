@@ -8,6 +8,12 @@
   --orange: #EA8432;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url('../public/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
 /* Remove default padding */
 
 ul[class], ol[class] {
