@@ -21,13 +21,15 @@ const NavBar: FC<HeaderTypes> = ({
         <nav className={styles.navbar}>
           <Link href="/">
             <a className={isOpen === false ? styles.navlogo : styles.navlogo + ' ' + styles.active}>
-              <Image
-                src={'/icons/icon_xepelin.svg'}
-                alt="logo"
-                width={204}
-                height={28}
-                layout="responsive"
-              />
+              <div className={styles.logo}>
+                <Image
+                  src={'/icons/icon_xepelin.svg'}
+                  alt="logo"
+                  width={204}
+                  height={28}
+                  layout="responsive"
+                />
+              </div>
             </a>
           </Link>
           <ul className={isOpen === false ? styles.navmenu : styles.navmenu + ' ' + styles.active}>
@@ -76,6 +78,30 @@ const NavBar: FC<HeaderTypes> = ({
               </Link>
             </li>
             <MediaContextProvider>
+              <Media lessThan="desktop">
+                <li className={styles.navitem}>
+                  <Link href="/">
+                    <a
+                      className={
+                        isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
+                      }
+                      onClick={openMenu}>
+                      {link_signin}
+                    </a>
+                  </Link>
+                </li>{' '}
+                <li className={styles.navitem}>
+                  <Link href="/">
+                    <a
+                      className={
+                        isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
+                      }
+                      onClick={openMenu}>
+                      {link_register}
+                    </a>
+                  </Link>
+                </li>
+              </Media>
               <Media greaterThanOrEqual="desktop">
                 <div style={{ display: 'flex' }}>
                   <li className={styles.navitem}>

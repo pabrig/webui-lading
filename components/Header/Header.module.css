@@ -1,5 +1,6 @@
 .header {
-    border-bottom: 1px solid #E2E8F0;
+    max-width: 1250px;
+    margin: 0 auto;
 }
 
 .navbar {
@@ -7,6 +8,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
+    max-width: 1540px;
+    z-index: 9;
+    margin: auto 0;
 }
 
 .hamburger {
@@ -34,14 +38,18 @@
 }
 
 .navlink {
-    font-size: 2rem;
-    font-weight: 400;
-    color: #475569;
+    white-space: pre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    color: var(--white);
     text-transform: uppercase;
 }
 
 .navlink:hover {
-    color: #482ff7;
+    color: var(--orange);
 }
 
 .navlogo {
@@ -50,17 +58,27 @@
     color: #482ff7;
 }
 
+.logo {
+    width: 160px;
+    height: auto;
+    @media(--desktop) {
+        width: 204px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .navmenu {
+        height: 100vh;
         position: fixed;
         left: -100%;
         top: 5rem;
         flex-direction: column;
-        background-color: #fff;
+        background-color: var(--dark-purple);
         width: 100%;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
+        z-index: 9;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
     .navmenu.active {
