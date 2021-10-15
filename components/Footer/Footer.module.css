@@ -1,11 +1,11 @@
 .footer {
   width: 100%;
-  height: 100vh;
   background-color: var(--dark-purple);
   margin: auto 0;
   list-style: none;
   @media (--desktop) {
     height: auto !important;
+    height: 100vh;
   }
   &__container {
     margin: 29px;

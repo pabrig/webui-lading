@@ -16,7 +16,7 @@ const NavBar: FC<HeaderTypes> = ({
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
   return (
-    <>
+    <div className={styles.header}>
       <nav className={styles.navbar}>
         <Link href="/">
           <a className={isOpen === false ? styles.navlogo : styles.navlogo + ' ' + styles.active}>
@@ -140,7 +140,7 @@ const NavBar: FC<HeaderTypes> = ({
           </button>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 export default NavBar;

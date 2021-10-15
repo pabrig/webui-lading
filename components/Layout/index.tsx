@@ -5,7 +5,6 @@ import Footer from '../Footer';
 
 const Layout = ({ children }) => {
   const header = Data.header;
-
   return (
     <div>
       <Header

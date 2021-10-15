@@ -36,26 +36,21 @@ const Hero: FC<HeroTypes> = ({ title, description }) => {
         </div>
 
         <Button />
-        <motion.div
-          animate={inView ? 'visible' : 'hidden'}
-          variants={variants}
-          transition={{ duration: 2, ease: 'easeOut' }}
-          ref={ref}>
-          <FloatingHeroFlash
-            yellow_flash_mob={hero.yellow_flash_mob}
-            yellow_flash_desk={hero.yellow_flash_desk}
-            purple_flash_mob={hero.purple_flash_mob}
-            purple_flash_desk={hero.purple_flash_desk}
-            pink_flash_mob={hero.pink_flash_mob}
-            pink_flash_desk={hero.pink_flash_desk}
-            big_money={hero.big_money}
-            money={hero.money}
-            star={hero.star}
-            bg_hero={hero.bg_hero}
-            elipse={hero.elipse}
-            elipse_hero={hero.elipse_hero}
-          />
-        </motion.div>
+
+        <FloatingHeroFlash
+          yellow_flash_mob={hero.yellow_flash_mob}
+          yellow_flash_desk={hero.yellow_flash_desk}
+          purple_flash_mob={hero.purple_flash_mob}
+          purple_flash_desk={hero.purple_flash_desk}
+          pink_flash_mob={hero.pink_flash_mob}
+          pink_flash_desk={hero.pink_flash_desk}
+          big_money={hero.big_money}
+          money={hero.money}
+          star={hero.star}
+          bg_hero={hero.bg_hero}
+          elipse={hero.elipse}
+          elipse_hero={hero.elipse_hero}
+        />
       </div>
     </div>
   );

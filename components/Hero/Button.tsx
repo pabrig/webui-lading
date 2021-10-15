@@ -22,8 +22,8 @@ const Button = () => {
           <Image
             src="/images/hero/arrow.png"
             alt="arrow"
-            width={1}
-            height={1}
+            width={0.9}
+            height={0.9}
             layout="responsive"
           />
         </div>
