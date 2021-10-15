@@ -4,8 +4,6 @@
     margin: auto 0;
     list-style: none;
     &__container {
-        margin-right: auto;
-        margin-left: auto;
         @media (--desktop) {
             margin-right: auto;
             margin-left: auto;
@@ -48,7 +46,10 @@
     margin: 0 auto;
     padding-bottom: 48px;
     ul {
-        border-bottom: 0;
+        margin: 0 auto;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 }
 
