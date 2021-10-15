@@ -18,6 +18,17 @@ export interface AboutTypes {
 export interface TestimonyTypes {
   title: string;
   description: string;
+  name_1: string;
+  name_2: string;
+  name_3: string;
+  position_1: string;
+  position_2: string;
+  position_3: string;
+  icon_1: string;
+  icon_2: string;
+  icon_3: string;
+  title_testimony: string;
+  description_testimony: string;
 }
 export interface FooterTypes {
   description: string;

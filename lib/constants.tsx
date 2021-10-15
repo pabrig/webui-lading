@@ -50,7 +50,19 @@ export const Data = {
   testimony: {
     title: '¿Qué dicen nuestros clientes?',
     description:
-      'La Fintech chilena especializada en servicios financieros para pequeñas y medianas empresas en Latinoaméricac'
+      'La Fintech chilena especializada en servicios financieros para pequeñas y medianas empresas en Latinoaméricac',
+    name_1: 'Andrés Rosales',
+    position_1: 'Gerente general de Sacer Spa',
+    icon_1: '/images/testimony/image_1.jpeg',
+    name_2: 'Carlos Zapata',
+    position_2: 'Gerente general de Zapata Ltda',
+    icon_2: '/images/testimony/image_2.jpeg',
+    name_3: 'Leonardo Moncada',
+    position_3: 'Ing y Montajes Cerro Bramador Spa',
+    icon_3: '/images/testimony/image_3.jpeg',
+    title_testimony: 'La Mejor Experiencia',
+    description_testimony:
+      '“En un principio habíamos pensado en acudir a algún banco, pero el problema es que necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera autónoma'
   },
 
   footer: {
