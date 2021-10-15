@@ -10,10 +10,13 @@
 
 - [React devtools](https://chrome.google.com/webstore/detail/react-developer-tools/) extension for debbuging.
 - [React Hooks](https://reactjs.org/docs/hooks-reference.html) React hooks API.
-- [Next Js](https://nextjs.org/) Next Js.
-- [Postcss](https://postcss.org/) Postcss.
+- [Next Js](https://nextjs.org/) SSR.
+- [Postcss](https://postcss.org/) Postcss/Styles.
 - [Typescript](https://www.typescriptlang.org/) Typescript.
-- [Framer-Motion](https://www.framer.com/docs/) Framer-Motion.
+- [Framer-Motion](https://www.framer.com/docs/) Animations.
+- [Swiper](https://swiperjs.com/react) Slider.
+- [Swiper](https://swiperjs.com/react) Slider.
+- [Artsy](https://github.com/artsy/fresnel) Breackpoints Media.
 
 
 ## Installation

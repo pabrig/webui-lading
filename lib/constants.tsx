@@ -9,7 +9,7 @@ export const { MediaContextProvider, Media } = createMedia({
   }
 });
 
-/* Data Info */
+/* Data Info General */
 export const Data = {
   header: {
     icon: '/icons/icon_xepelin.svg',
@@ -64,6 +64,7 @@ export const Data = {
   }
 };
 
+/*Data Info Section */
 export const items_solutions = [
   {
     name: 'Financiamento directo',
@@ -159,32 +160,3 @@ export const items_testimony = {
   description_testimony:
     '“En un principio habíamos pensado en acudir a algún banco, pero el problema es que necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera autónoma'
 };
-// export const items_testimony = [
-//   {
-//     id: '1',
-//     icon: '/images/testimony/image_1.jpeg',
-//     name: 'Andrés Rosales',
-//     position: 'Gerente general de Sacer Spa',
-//     title: 'La Mejor Experiencia',
-//     description:
-//       '“En un principio habíamos pensado en acudir a algún banco, pero el problema es que necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera autónoma'
-//   },
-//   {
-//     id: '2',
-//     icon: '/images/testimony/image_2.jpeg',
-//     name: 'Carlos Zapata',
-//     position: 'Gerente general de Zapata Ltda',
-//     title: 'La Mejor Experiencia',
-//     description:
-//       '“En un principio habíamos pensado en acudir a algún banco, pero el problema es que necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera autónoma'
-//   },
-//   {
-//     id: '3',
-//     icon: '/images/testimony/image_3.jpeg',
-//     name: 'Leonardo Moncada',
-//     position: 'Ing y MOntajes Cerro Bramador Spa',
-//     title: 'La Mejor Experiencia',
-//     description:
-//       '“En un principio habíamos pensado en acudir a algún banco, pero el problema es que necesitábamos una serie de documentos y trámites, pero no nos daba el tiempo, por eso también estamos muy agradecidos con Xepelin, porque confiaron en nosotros. Gracias a esta alternativa de financiamiento comenzamos a tener mas flujo, lo que nos permitió pagar sueldos, cotizaciones e impuestos al día, además de comprar materiales."Con tan solo 7 meses de funcionamiento a toda máquina, la empresa de soluciones de acero SACER ha sabido cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera autónoma'
-//   }
-// ];
