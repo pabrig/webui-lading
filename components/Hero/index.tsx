@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect, useRef } from 'react';
 import styles from './Hero.module.css';
 import { HeroTypes } from '../../types/Model';
 import FloatingHeroFlash from './FloatingHeroFlash';
@@ -11,23 +11,9 @@ import { useInView } from 'react-intersection-observer';
 const Hero: FC<HeroTypes> = ({ title, description }) => {
   const hero = Data.hero;
 
-  const [ref, inView, entry] = useInView({
-    threshold: 0.5,
-    triggerOnce: false
-  });
-
-  const variants = {
-    visible: { opacity: 1, scale: 1, y: 0 },
-    hidden: {
-      opacity: 0,
-      scale: 0.65,
-      y: 50
-    }
-  };
-
   return (
     <div className={styles.hero}>
-      <div className={styles.hero__container}>
+      <motion.div className={styles.hero__container}>
         <div className={styles.hero__title}>
           <h2 dangerouslySetInnerHTML={{ __html: title }} />
         </div>
@@ -51,7 +37,7 @@ const Hero: FC<HeroTypes> = ({ title, description }) => {
           elipse={hero.elipse}
           elipse_hero={hero.elipse_hero}
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -105,27 +105,27 @@ const NavBar: FC<HeaderTypes> = ({
               <Media greaterThanOrEqual="desktop">
                 <div style={{ display: 'flex' }}>
                   <li className={styles.navitem}>
-                    <button className={styles.button_desk}>
+                    <button className={styles.button_purple}>
                       <Link href="/">
                         <a
                           className={
                             isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                           }
                           onClick={openMenu}>
-                          {link_signin}
+                          <p> {link_signin}</p>
                         </a>
                       </Link>
                     </button>
                   </li>
                   <li className={styles.navitem}>
-                    <button className={styles.button_desk}>
+                    <button className={styles.button_white}>
                       <Link href="/">
                         <a
                           className={
                             isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
                           }
                           onClick={openMenu}>
-                          {link_register}
+                          <p>{link_register}</p>
                         </a>
                       </Link>
                     </button>
