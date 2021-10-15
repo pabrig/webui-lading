@@ -1,72 +1,22 @@
-import Link from 'next/link';
 import React, { FC, useState } from 'react';
-import { Media, MediaContextProvider } from '../../lib/constants';
-import { HeaderTypes } from '../../types/Model';
 import styles from './Header.module.css';
+import NavBar from './NavBar';
+import { Data } from '../../lib/constants';
 
-import Image from 'next/image';
-const Header: FC<HeaderTypes> = ({
-  link_solutions,
-  link_about,
-  link_resource,
-  link_job,
-  link_signin,
-  link_register
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const openMenu = () => setIsOpen(!isOpen);
+const Header = () => {
+  const header = Data.header;
   return (
-    <>
-      <header className={styles.header}>
-        <nav className={styles.navbar}>
-          <Link href="/">
-            <a className={styles.navlogo}>[BrandLogo]</a>
-          </Link>
-          <ul className={isOpen === false ? styles.navmenu : styles.navmenu + ' ' + styles.active}>
-            <li className={styles.navitem}>
-              <Link href="/">
-                <a
-                  className={
-                    isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                  }
-                  onClick={openMenu}>
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/about">
-                <a
-                  className={
-                    isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                  }
-                  onClick={openMenu}>
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className={styles.navitem}>
-              <Link href="/contact">
-                <a
-                  className={
-                    isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                  }
-                  onClick={openMenu}>
-                  Contact
-                </a>
-              </Link>
-            </li>
-          </ul>
-          <button
-            className={isOpen === false ? styles.hamburger : styles.hamburger + ' ' + styles.active}
-            onClick={openMenu}>
-            <span className={styles.bar}></span>
-            <span className={styles.bar}></span>
-            <span className={styles.bar}></span>
-          </button>
-        </nav>
-      </header>
-    </>
+    <div className={styles.header}>
+      <NavBar
+        icon={header.icon}
+        link_solutions={header.link_solutions}
+        link_about={header.link_about}
+        link_resource={header.link_resource}
+        link_job={header.link_job}
+        link_signin={header.link_signin}
+        link_register={header.link_register}
+      />
+    </div>
   );
 };
 export default Header;
