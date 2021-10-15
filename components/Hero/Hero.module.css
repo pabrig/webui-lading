@@ -98,11 +98,6 @@
     &__floating {
         position: relative;
         &_yellow {
-            width: 17px;
-            height: 117px;
-            position: absolute;
-            top: -25rem;
-            right: 3rem;
             @media(--desktop) {
                 width: 17px;
                 height: 98px;
@@ -110,6 +105,27 @@
                 top: -3rem;
                 right: 30rem;
             }
+        }
+        &_yellow_mob {
+            width: 17px;
+            height: 117px;
+            position: absolute;
+            top: -25rem;
+            right: 3rem;
+        }
+        &_purple_mob {
+            width: 18px;
+            height: 74px;
+            position: absolute;
+            bottom: -22rem;
+            left: 1rem;
+        }
+        &_pink_mob {
+            width: 153px;
+            height: 37px;
+            position: absolute;
+            right: 0;
+            bottom: -20rem;
         }
         &_pink {
             width: 153px;

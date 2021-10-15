@@ -54,12 +54,39 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
         {/* Mobile */}
         <MediaContextProvider>
           <Media lessThan="desktop">
-            <motion.div className={styles.hero__floating_yellow}>
+            <motion.div
+              className={styles.hero__floating_yellow_mob}
+              animate={{ y: 10 }}
+              transition={SpringTransition}>
               <Image
                 src={yellow_flash_mob}
                 alt="flash_yellow"
                 width={17}
                 height={117}
+                layout="responsive"
+              />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_purple_mob}
+              animate={{ y: -20 }}
+              transition={SpringTransition}>
+              <Image
+                src={purple_flash_mob}
+                alt="flash_purple"
+                width={18}
+                height={74}
+                layout="responsive"
+              />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_pink_mob}
+              animate={{ x: -10 }}
+              transition={SpringTransition}>
+              <Image
+                src={pink_flash_mob}
+                alt="flash_pink"
+                width={153}
+                height={37}
                 layout="responsive"
               />
             </motion.div>
