@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import styles from './Reality.module.css';
-import Image from 'next/image';
 import { RealityTypes } from '../../types/Model';
 import FloatingFlash from './FloatingFlash';
 import Card from './Card';

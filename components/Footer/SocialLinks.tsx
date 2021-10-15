@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Footer.module.css';
 import Image from 'next/image';
 import { items_social } from '../../lib/constants';

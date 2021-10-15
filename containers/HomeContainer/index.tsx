@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
 import styles from '../../styles/Home.module.css';
 import { Hero, Reality, Testimony, Footer } from '../../components';
 
 import { Data } from '../../lib/constants';
-const HomeContainer: FC = () => {
+const HomeContainer = () => {
   //Const Data
   const hero = Data.hero;
   const reality = Data.reality;

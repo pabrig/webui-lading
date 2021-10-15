@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, useRef } from 'react';
+import React, { FC } from 'react';
 import styles from './Hero.module.css';
 import { HeroTypes } from '../../types/Model';
 import FloatingHeroFlash from './FloatingHeroFlash';

@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import styles from './Testimony.module.css';
 import Image from 'next/image';
 import { items_testimony } from '../../lib/constants';

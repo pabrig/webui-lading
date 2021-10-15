@@ -1,4 +1,3 @@
-import React, { useState, useRef } from 'react';
 import styles from './Reality.module.css';
 import Image from 'next/image';
 import { items_cards } from '../../lib/constants';

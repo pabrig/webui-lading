@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import styles from './Footer.module.css';
 import Image from 'next/image';
 import ListFooter from './ListFooter';
