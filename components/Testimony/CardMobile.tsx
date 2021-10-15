@@ -2,6 +2,7 @@ import styles from './Testimony.module.css';
 import Image from 'next/image';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Button from './Button';
 
 const CardMobile = () => {
   return (
@@ -62,9 +63,7 @@ const CardMobile = () => {
         </p>
         <h2>Andrés Rosales</h2>
         <p>Gerente general de Sacer Spa</p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
+        <Button />
       </TabPanel>
       <TabPanel>
         <h2>La Mejor Experiencia</h2>
@@ -80,9 +79,7 @@ const CardMobile = () => {
         </p>
         <h2>Carlos Zapata</h2>
         <p>Gerente general de Zapata Ltda</p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
+        <Button />
       </TabPanel>
       <TabPanel>
         <h2>La Mejor Experiencia</h2>
@@ -98,9 +95,7 @@ const CardMobile = () => {
         </p>
         <h2>Leonardo Moncada</h2>
         <p>Ing y MOntajes Cerro Bramador Spa</p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
+        <Button />
       </TabPanel>
     </Tabs>
   );

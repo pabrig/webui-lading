@@ -14,15 +14,19 @@
         margin-bottom: 45px;
     }
     h2 {
-        margin: 29px;
+        margin: 10px;
         font-size: 24px;
         font-weight: 600;
         line-height: 34px;
         text-align: center;
+        @media(--desktop) {
+            margin: 29px;
+        }
     }
     p {
         margin-left: 29px;
         margin-right: 29px;
+        margin-bottom: 40px;
         font-size: 13px;
         font-weight: 400;
         line-height: 28px;
@@ -88,12 +92,37 @@
     }
 }
 
-.card__buttons {
-    width: 170.77px;
+.button {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 220px;
     height: 48px;
     background: #E9944F;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
     p {
-        color: var(--white)
+        color: var(--white);
+        margin-left: -3rem;
+        margin-top: 2.5rem;
+        font-size: 18px;
+    }
+    &_container {
+        margin-right: -11rem;
+        width: 48px;
+        height: 48px;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        border-radius: 10px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        &_arrow {
+            width: 1rem;
+            margin: auto;
+            margin-top: 1rem;
+        }
     }
 }

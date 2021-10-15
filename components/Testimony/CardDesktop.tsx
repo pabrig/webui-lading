@@ -3,6 +3,7 @@ import styles from './Testimony.module.css';
 import Image from 'next/image';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Button from './Button';
 
 const CardDesktop = () => {
   return (
@@ -67,9 +68,7 @@ const CardDesktop = () => {
           cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
           autónoma
         </p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
+        <Button />
       </TabPanel>
       <TabPanel className={styles.card__paragraph}>
         <h2>La Mejor Experiencia</h2>
@@ -83,9 +82,7 @@ const CardDesktop = () => {
           cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
           autónoma
         </p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
+        <Button />
       </TabPanel>
       <TabPanel className={styles.card__paragraph}>
         <h2>La Mejor Experiencia</h2>
@@ -99,9 +96,7 @@ const CardDesktop = () => {
           cómo lidiar con las dificultades que conlleva el emprender con un negocio de manera
           autónoma
         </p>
-        <button className={styles.card__buttons}>
-          <p> Conoce más</p>
-        </button>
+        <Button />
       </TabPanel>
     </Tabs>
   );
