@@ -1,6 +1,6 @@
 import styles from '../../styles/Home.module.css';
 import { Hero, Reality, Testimony, Footer } from '../../components';
-
+import { motion } from 'framer-motion';
 import { Data } from '../../lib/constants';
 const HomeContainer = () => {
   //Const Data
@@ -9,11 +9,17 @@ const HomeContainer = () => {
   const testimony = Data.testimony;
 
   return (
-    <div className={styles.home}>
+    <motion.div
+      className={styles.home}
+      initial={{ opacity: 1 }}
+      animate={{
+        opacity: 1
+      }}
+      transition={{ duration: 5 }}>
       <Hero title={hero.title} description={hero.description} />
       <Reality title={reality.title} description={reality.description} />
       <Testimony title={testimony.title} description={testimony.description} />
-    </div>
+    </motion.div>
   );
 };
 export default HomeContainer;

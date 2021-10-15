@@ -4,6 +4,8 @@
     margin: auto 0;
     list-style: none;
     &__container {
+        margin-right: auto;
+        margin-left: auto;
         @media (--desktop) {
             margin-right: auto;
             margin-left: auto;
@@ -105,16 +107,17 @@
     border-radius: 10px;
     p {
         color: var(--white);
-        margin-left: -3rem;
+        margin-left: -12px;
         margin-top: 2.5rem;
         font-size: 18px;
+        white-space: pre;
     }
     &_container {
-        margin-right: -11rem;
+        position: relative;
+        right: -25px;
         width: 48px;
         height: 48px;
         background-color: rgba(0, 0, 0, 0.1);
-        position: absolute;
         border-radius: 10px;
         &:hover {
             background-color: rgba(0, 0, 0, 0.3);

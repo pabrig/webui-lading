@@ -126,6 +126,7 @@
             position: absolute;
             right: 0;
             bottom: -20rem;
+            z-index: 9;
         }
         &_pink {
             width: 153px;
