@@ -3,7 +3,7 @@ import styles from './Hero.module.css';
 import { FloatingHeroTypes } from '../../types/Model';
 import Image from 'next/image';
 import { MediaContextProvider, Media } from '../../lib/constants';
-import { motion, Transition } from 'framer-motion';
+import { motion, Transition, useMotionValue, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 //Animations
 
@@ -48,8 +48,18 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
       y: 50
     }
   };
+  const x = useMotionValue(200);
+  const y = useMotionValue(200);
+
+  const rotateX = useTransform(y, [0, 1400], [45, -165]);
+  const rotateY = useTransform(x, [0, 1400], [-165, 45]);
+
+  function handleMouse(e) {
+    x.set(e.pageX);
+    y.set(e.pageY);
+  }
   return (
-    <motion.div className={styles.floating}>
+    <motion.div className={styles.floating} onMouseMove={handleMouse}>
       <div className={styles.hero__floating}>
         {/* Mobile */}
         <MediaContextProvider>
@@ -138,8 +148,8 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
               ref={ref}>
               <motion.div
                 className={styles.hero__floating_money}
-                animate={{ y: 30, x: 40 }}
-                transition={YoYoTransition}>
+                animate={{ rotate: 360 }}
+                transition={RotateTransition}>
                 <Image src={money} alt="money" width={80} height={64} layout="responsive" />
               </motion.div>
               <motion.div
@@ -156,8 +166,10 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
               </motion.div>
               <motion.div
                 className={styles.hero__floating_star}
-                animate={{ rotate: 360 }}
-                transition={RotateTransition}>
+                style={{
+                  rotateX: rotateX,
+                  rotateY: rotateY
+                }}>
                 <Image src={star} alt="star" width={566} height={609} layout="responsive" />
               </motion.div>
 
