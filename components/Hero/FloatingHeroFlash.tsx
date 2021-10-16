@@ -179,13 +179,14 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
                 transition={SpringTransition}>
                 <Image src={bg_hero} alt="bg_hero" width={52} height={58} layout="responsive" />
               </motion.div>
+              <motion.div
+                className={styles.hero__floating_elipse}
+                animate={{ x: -10 }}
+                transition={SpringTransition}>
+                <Image src={elipse} alt="elipse" width={441} height={469} layout="responsive" />
+              </motion.div>
             </motion.div>
-            <motion.div
-              className={styles.hero__floating_elipse}
-              animate={{ x: -10 }}
-              transition={SpringTransition}>
-              <Image src={elipse} alt="elipse" width={441} height={469} layout="responsive" />
-            </motion.div>
+
             <motion.div
               className={styles.hero__floating_elipse_hero}
               animate={{ x: -10 }}
