@@ -45,7 +45,6 @@
     line-height: 21px;
     letter-spacing: -0.02em;
     color: var(--white);
-    text-transform: uppercase;
 }
 
 .navlink:hover {
