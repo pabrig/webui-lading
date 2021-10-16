@@ -5,6 +5,7 @@ import { Data } from '../../lib/constants';
 
 const Footer = () => {
   const footer = Data.footer;
+
   return (
     <div className={styles.footer}>
       <div className={styles.footer__container}>
