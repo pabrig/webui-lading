@@ -50,6 +50,18 @@
         align-items: center;
         display: flex;
         justify-content: center;
+        li {
+            border-radius: 10px;
+            &:hover {
+                animation: pulse 1s;
+                box-shadow: 1px -1px 25px 7px rgba(131, 131, 131, 0.75);
+            }
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 var(--hover);
+                }
+            }
+        }
     }
 }
 
@@ -106,6 +118,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    &:hover {
+        animation: pulse 1s;
+        box-shadow: 1px -1px 25px 7px rgba(233, 148, 79, 0.75);
+    }
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 var(--hover);
+        }
+    }
     p {
         color: var(--white);
         margin-left: -12px;
@@ -120,9 +141,6 @@
         height: 48px;
         background-color: rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        &:hover {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
         &_arrow {
             width: 1rem;
             margin: auto;

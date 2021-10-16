@@ -1,16 +1,9 @@
 import styles from './Testimony.module.css';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Button = () => {
   return (
-    <motion.button
-      className={styles.button}
-      whileHover={{
-        scale: 1.2,
-        transition: { duration: 1 }
-      }}
-      whileTap={{ scale: 0.9 }}>
+    <button className={styles.button}>
       <div className={styles.button_description}>
         {' '}
         <p> Conoce Más</p>
@@ -27,7 +20,7 @@ const Button = () => {
           />
         </div>
       </div>
-    </motion.button>
+    </button>
   );
 };
 
