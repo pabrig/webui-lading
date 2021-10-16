@@ -5,6 +5,7 @@ import { items_testimony } from '../../lib/constants';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Button from './Button';
+import Stars from './Stars';
 
 const CardMobile = () => {
   return (
@@ -56,6 +57,7 @@ const CardMobile = () => {
         <p>{items_testimony.description_testimony}</p>
         <h2>{items_testimony.name_1}</h2>
         <p>{items_testimony.position_1}</p>
+        <Stars />
         <Button />
       </TabPanel>
       <TabPanel className={styles.card__paragraph}>
@@ -63,6 +65,7 @@ const CardMobile = () => {
         <p>{items_testimony.description_testimony}</p>
         <h2>{items_testimony.name_2}</h2>
         <p>{items_testimony.position_2}</p>
+        <Stars />
         <Button />
       </TabPanel>
       <TabPanel className={styles.card__paragraph}>
@@ -70,6 +73,7 @@ const CardMobile = () => {
         <p>{items_testimony.description_testimony}</p>
         <h2>{items_testimony.name_3}</h2>
         <p>{items_testimony.position_3}</p>
+        <Stars />
         <Button />
       </TabPanel>
     </Tabs>

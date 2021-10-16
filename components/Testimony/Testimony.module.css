@@ -148,3 +148,18 @@
         }
     }
 }
+
+.star__container {
+    margin-bottom: 15px;
+    margin-top: -30px;
+    margin-left: -50px;
+    @media(--desktop) {
+        margin-top: 10px;
+    }
+}
+
+.star__image {
+    width: 18px;
+    height: 18px;
+    margin: 5px
+}
