@@ -1,4 +1,4 @@
-import { Transition, useMotionValue, useTransform } from 'framer-motion';
+import { Transition } from 'framer-motion';
 
 function useAnimations() {
   const SpringTransition: Transition = {

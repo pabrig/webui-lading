@@ -22,7 +22,6 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
 }) => {
   const [SpringTransition, YoYoTransition, RotateTransition] = useAnimations();
 
-  //HandleMouseAnimation
   const x = useMotionValue(200);
   const y = useMotionValue(200);
 

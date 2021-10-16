@@ -3,24 +3,27 @@ import styles from './Hero.module.css';
 import { HeroTypes } from '../../types/Model';
 import FloatingHeroFlash from './FloatingHeroFlash';
 import Button from './Button';
-import NavBar from '../Header';
+import { useViewportScroll, motion, useTransform } from 'framer-motion';
+
 import { Data } from '../../lib/constants';
 
 const Hero: FC<HeroTypes> = ({ title, description }) => {
   const hero = Data.hero;
+  const { scrollY } = useViewportScroll();
+  const y1 = useTransform(scrollY, [0, 300], [0, 200]);
 
   return (
     <div className={styles.hero}>
-      <div className={styles.hero__container}>
-        <div className={styles.hero__title}>
-          <h2 dangerouslySetInnerHTML={{ __html: title }} />
-        </div>
-        <div className={styles.hero__description}>
-          <p dangerouslySetInnerHTML={{ __html: description }} />
-        </div>
-
-        <Button />
-
+      <motion.div className={styles.hero__container}>
+        <motion.div className={styles.hero__header} style={{ y: y1, x: -50 }}>
+          <motion.div className={styles.hero__title}>
+            <h2 dangerouslySetInnerHTML={{ __html: title }} />
+          </motion.div>
+          <div className={styles.hero__description}>
+            <p dangerouslySetInnerHTML={{ __html: description }} />
+          </div>
+          <Button />
+        </motion.div>{' '}
         <FloatingHeroFlash
           yellow_flash_mob={hero.yellow_flash_mob}
           yellow_flash_desk={hero.yellow_flash_desk}
@@ -35,7 +38,7 @@ const Hero: FC<HeroTypes> = ({ title, description }) => {
           elipse={hero.elipse}
           elipse_hero={hero.elipse_hero}
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

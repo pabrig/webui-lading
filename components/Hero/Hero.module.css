@@ -6,6 +6,9 @@
         margin: 29px;
         color: var(--white)
     }
+    &__header {
+        margin-left: 50px;
+    }
     &__title {
         width: 161px;
         height: 118px;
@@ -15,19 +18,20 @@
             width: 434.54px;
             height: 201.78px;
             left: 204.13px;
-            top: 80.83px;
         }
     }
     &__description {
         width: 291px;
         height: 84px;
         margin-top: 80px;
+        padding-bottom: 10px;
+        ;
         @media(--desktop) {
             position: absolute;
             width: 434.54px;
             height: 201.78px;
             left: 204.13px;
-            top: 350.83px;
+            top: 15rem;
         }
     }
     h2 {
@@ -64,7 +68,7 @@
         border-radius: 8px;
         cursor: pointer;
         @media(--desktop) {
-            top: 32rem;
+            top: 25rem;
             left: 12.5rem;
         }
         &_description {
