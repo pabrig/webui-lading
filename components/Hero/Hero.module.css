@@ -67,6 +67,16 @@
         border: 1px solid #7847F2;
         border-radius: 8px;
         cursor: pointer;
+        &:hover {
+            animation: pulse 1s;
+            box-shadow: 1px -1px 25px 7px rgba(148, 105, 254, 0.75);
+            transform: scale(0.98);
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 var(--hover);
+            }
+        }
         @media(--desktop) {
             top: 25rem;
             left: 12.5rem;
