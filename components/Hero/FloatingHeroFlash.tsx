@@ -3,9 +3,8 @@ import styles from './Hero.module.css';
 import { FloatingHeroTypes } from '../../types/Model';
 import Image from 'next/image';
 import { MediaContextProvider, Media } from '../../lib/constants';
-import useAnimationFade from '../../hooks/useAnimations';
+import useAnimations from '../../hooks/useAnimations';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
   pink_flash_mob,
@@ -21,14 +20,9 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
   elipse,
   elipse_hero
 }) => {
-  const [SpringTransition, YoYoTransition, RotateTransition, variants] = useAnimationFade();
+  const [SpringTransition, YoYoTransition, RotateTransition] = useAnimations();
 
   //HandleMouseAnimation
-  const [ref, inView, entry] = useInView({
-    threshold: 0.5,
-    triggerOnce: false
-  });
-
   const x = useMotionValue(200);
   const y = useMotionValue(200);
 
@@ -122,50 +116,39 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
                 layout="responsive"
               />
             </motion.div>
-            <motion.div
-              animate={inView ? 'visible' : 'hidden'}
-              variants={variants}
-              transition={{ duration: 2, ease: 'easeOut' }}
-              ref={ref}>
-              <motion.div
-                className={styles.hero__floating_money}
-                animate={{ rotate: 360 }}
-                transition={RotateTransition}>
-                <Image src={money} alt="money" width={80} height={64} layout="responsive" />
-              </motion.div>
-              <motion.div
-                className={styles.hero__floating_big_money}
-                animate={{ y: 10, x: 10 }}
-                transition={YoYoTransition}>
-                <Image
-                  src={big_money}
-                  alt="flash_pink"
-                  width={98}
-                  height={110}
-                  layout="responsive"
-                />
-              </motion.div>
-              <motion.div
-                className={styles.hero__floating_star}
-                style={{
-                  rotateX: rotateX,
-                  rotateY: rotateY
-                }}>
-                <Image src={star} alt="star" width={566} height={609} layout="responsive" />
-              </motion.div>
 
-              <motion.div
-                className={styles.hero__floating_bg_hero}
-                animate={{ x: -10 }}
-                transition={SpringTransition}>
-                <Image src={bg_hero} alt="bg_hero" width={52} height={58} layout="responsive" />
-              </motion.div>
-              <motion.div
-                className={styles.hero__floating_elipse}
-                animate={{ x: -10 }}
-                transition={SpringTransition}>
-                <Image src={elipse} alt="elipse" width={441} height={469} layout="responsive" />
-              </motion.div>
+            <motion.div
+              className={styles.hero__floating_money}
+              animate={{ rotate: 360 }}
+              transition={RotateTransition}>
+              <Image src={money} alt="money" width={80} height={64} layout="responsive" />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_big_money}
+              animate={{ y: 10, x: 10 }}
+              transition={YoYoTransition}>
+              <Image src={big_money} alt="flash_pink" width={98} height={110} layout="responsive" />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_star}
+              style={{
+                rotateX: rotateX,
+                rotateY: rotateY
+              }}>
+              <Image src={star} alt="star" width={566} height={609} layout="responsive" />
+            </motion.div>
+
+            <motion.div
+              className={styles.hero__floating_bg_hero}
+              animate={{ x: -10 }}
+              transition={SpringTransition}>
+              <Image src={bg_hero} alt="bg_hero" width={52} height={58} layout="responsive" />
+            </motion.div>
+            <motion.div
+              className={styles.hero__floating_elipse}
+              animate={{ x: -10 }}
+              transition={SpringTransition}>
+              <Image src={elipse} alt="elipse" width={441} height={469} layout="responsive" />
             </motion.div>
 
             <motion.div
