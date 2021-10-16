@@ -77,31 +77,29 @@ const NavBar: FC<HeaderTypes> = ({
                 </a>
               </Link>
             </li>
+            <li className={styles.navitem_mob}>
+              <Link href="/">
+                <a
+                  className={
+                    isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
+                  }
+                  onClick={openMenu}>
+                  {link_signin}
+                </a>
+              </Link>
+            </li>{' '}
+            <li className={styles.navitem_mob}>
+              <Link href="/">
+                <a
+                  className={
+                    isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
+                  }
+                  onClick={openMenu}>
+                  {link_register}
+                </a>
+              </Link>
+            </li>
             <MediaContextProvider>
-              <Media lessThan="desktop">
-                <li className={styles.navitem}>
-                  <Link href="/">
-                    <a
-                      className={
-                        isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                      }
-                      onClick={openMenu}>
-                      {link_signin}
-                    </a>
-                  </Link>
-                </li>{' '}
-                <li className={styles.navitem}>
-                  <Link href="/">
-                    <a
-                      className={
-                        isOpen === false ? styles.navlink : styles.navlink + ' ' + styles.active
-                      }
-                      onClick={openMenu}>
-                      {link_register}
-                    </a>
-                  </Link>
-                </li>
-              </Media>
               <Media greaterThanOrEqual="desktop">
                 <div style={{ display: 'flex' }}>
                   <li className={styles.navitem}>
