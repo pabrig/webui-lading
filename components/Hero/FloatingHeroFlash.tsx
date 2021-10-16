@@ -3,23 +3,9 @@ import styles from './Hero.module.css';
 import { FloatingHeroTypes } from '../../types/Model';
 import Image from 'next/image';
 import { MediaContextProvider, Media } from '../../lib/constants';
-import { motion, Transition, useMotionValue, useTransform } from 'framer-motion';
+import useAnimationFade from '../../hooks/useAnimations';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-//Animations
-
-const SpringTransition: Transition = {
-  type: 'spring',
-  duration: 7
-};
-const YoYoTransition: Transition = {
-  yoyo: Infinity,
-  duration: 2
-};
-const RotateTransition: Transition = {
-  yoyo: Infinity,
-  duration: 2,
-  ease: 'easeOut'
-};
 
 const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
   pink_flash_mob,
@@ -35,19 +21,14 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
   elipse,
   elipse_hero
 }) => {
+  const [SpringTransition, YoYoTransition, RotateTransition, variants] = useAnimationFade();
+
+  //HandleMouseAnimation
   const [ref, inView, entry] = useInView({
     threshold: 0.5,
     triggerOnce: false
   });
 
-  const variants = {
-    visible: { opacity: 1, scale: 1, y: 0 },
-    hidden: {
-      opacity: 0,
-      scale: 0.65,
-      y: 50
-    }
-  };
   const x = useMotionValue(200);
   const y = useMotionValue(200);
 

@@ -5,15 +5,13 @@ import FloatingHeroFlash from './FloatingHeroFlash';
 import Button from './Button';
 import NavBar from '../Header';
 import { Data } from '../../lib/constants';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const Hero: FC<HeroTypes> = ({ title, description }) => {
   const hero = Data.hero;
 
   return (
     <div className={styles.hero}>
-      <motion.div className={styles.hero__container}>
+      <div className={styles.hero__container}>
         <div className={styles.hero__title}>
           <h2 dangerouslySetInnerHTML={{ __html: title }} />
         </div>
@@ -37,7 +35,7 @@ const Hero: FC<HeroTypes> = ({ title, description }) => {
           elipse={hero.elipse}
           elipse_hero={hero.elipse_hero}
         />
-      </motion.div>
+      </div>
     </div>
   );
 };
