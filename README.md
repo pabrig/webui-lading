@@ -27,7 +27,9 @@
 
 - yarn 
 
-- yarn start (http://localhost:3000/) 
+## Compile in development
+
+- yarn run dev (http://localhost:3000/) 
 
 
 ## Author
