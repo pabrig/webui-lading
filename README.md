@@ -15,7 +15,6 @@
 - [Typescript](https://www.typescriptlang.org/) Typescript.
 - [Framer-Motion](https://www.framer.com/docs/) Animations.
 - [Swiper](https://swiperjs.com/react) Slider.
-- [Swiper](https://swiperjs.com/react) Slider.
 - [Artsy](https://github.com/artsy/fresnel) Breackpoints Media.
 
 
