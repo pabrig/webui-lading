@@ -10,20 +10,25 @@ import { Data } from '../../lib/constants';
 const Hero: FC<HeroTypes> = ({ title, description }) => {
   const hero = Data.hero;
   const { scrollY } = useViewportScroll();
-  const y1 = useTransform(scrollY, [0, 300], [0, 200]);
+  const y1 = useTransform(scrollY, [10, 100], [10, 100]);
+  const y2 = useTransform(scrollY, [0, 300], [0, -150]);
 
   return (
     <div className={styles.hero}>
       <motion.div className={styles.hero__container}>
-        <motion.div className={styles.hero__header} style={{ y: y1, x: -50 }}>
+        <motion.div className={styles.hero__header} style={{ y: y2, x: -50 }}>
           <motion.div className={styles.hero__title}>
             <h2 dangerouslySetInnerHTML={{ __html: title }} />
           </motion.div>
           <div className={styles.hero__description}>
             <p dangerouslySetInnerHTML={{ __html: description }} />
           </div>
+        </motion.div>
+
+        <motion.div style={{ y: y1 }}>
           <Button />
-        </motion.div>{' '}
+        </motion.div>
+
         <FloatingHeroFlash
           yellow_flash_mob={hero.yellow_flash_mob}
           yellow_flash_desk={hero.yellow_flash_desk}
