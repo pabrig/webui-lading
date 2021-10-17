@@ -71,7 +71,6 @@
             animation: pulse 1s;
             box-shadow: 1px -1px 25px 7px rgba(148, 105, 254, 0.75);
             transform: scale(0.99);
-            opacity: 0.8;
         }
         @keyframes pulse {
             0% {
@@ -93,7 +92,6 @@
                 line-height: 22px;
                 &:hover {
                     font-weight: 900;
-                    font-size: 16px;
                 }
             }
         }

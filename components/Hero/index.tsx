@@ -10,7 +10,7 @@ import { Data } from '../../lib/constants';
 const Hero: FC<HeroTypes> = ({ title, description }) => {
   const hero = Data.hero;
   const { scrollY } = useViewportScroll();
-  const y1 = useTransform(scrollY, [10, 100], [10, 100]);
+  const y1 = useTransform(scrollY, [10, 50], [10, 50]);
   const y2 = useTransform(scrollY, [0, 300], [0, -150]);
 
   return (
