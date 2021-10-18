@@ -28,7 +28,7 @@ const FloatingHeroFlash: FC<FloatingHeroTypes> = ({
   const rotateX = useTransform(y, [0, 1400], [45, -165]);
   const rotateY = useTransform(x, [0, 1400], [-165, 45]);
 
-  function handleMouse(e) {
+  function handleMouse(e: any) {
     x.set(e.pageX);
     y.set(e.pageY);
   }
